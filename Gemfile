@@ -27,6 +27,18 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Search bar functionality
+gem "pg_search"
+
+# Calendar-building gem
+gem "simple_calendar", "~> 2.4"
+
+# Geocoding gem to convert addresses into GPS coordinates
+gem "geocoder"
+
+# Voting functionality
+gem "acts_as_votable"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
