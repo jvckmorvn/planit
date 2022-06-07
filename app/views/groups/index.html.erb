@@ -1,1 +1,8 @@
-<h1>Yours groups</h1>
+<h1>My Groups</h1>
+
+<div class="container">
+  <% @groups.each do |group| %>
+    <%= render "group_card" %>
+  <% end %>
+  <%= render "new_group_card" %>
+</div>
