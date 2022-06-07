@@ -1,0 +1,9 @@
+<div class="group-card" data-controller="edit-group">
+  <%= image_tag group.image_url %>
+
+  <div class="group-infos" data-edit-group-target="infos">
+    <h2><%= group.name %></h2>
+    <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-group#displayForm"></i>
+  </div>
+
+  <%= simple_form_for group, html: {class: "d-none", data: {edit_group_target: "form"}} do |f| %>
