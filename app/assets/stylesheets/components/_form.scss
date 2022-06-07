@@ -1,0 +1,22 @@
+.common-form {
+  background-color: rgba(244, 244, 244, 0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 24px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.form-control {
+  max-width: 600px;
+}
+
+.group-form-inner {
+  height: 80%;
+  width: 80%;
+  border: 1px dotted grey;
+}

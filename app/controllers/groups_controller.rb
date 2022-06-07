@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
     @group = Group.new
-
   end
 
   def show
@@ -11,9 +10,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.user = current_user
     if @group.save
-      UserGroup.create(user: current_user, group: @group)
+      UserGroup.create(user: current_user, group: @group, is_creator: true)
       redirect_to groups_path
     else
       render :new, status: :unprocessable_entity
