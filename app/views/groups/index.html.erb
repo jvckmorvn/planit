@@ -1,1 +1,21 @@
 <h1>Yours groups</h1>
+
+<div data-controller="group-card">
+    <% @groups.each do |group| %>
+      <%= link_to groups_path(@group), style: "text-decoration: none; color: black;" do %>
+        <div class="group-card">
+          <div class="info-group-card">
+          <p>
+            <%= group.name %>
+          </p>
+          </div>
+        </div>
+        <% end %>
+    <% end %>
+    </div>
+
+  <%= simple_form_for @group do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class: "create-group-btn" %>
+  <% end %>
+</div>
