@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one_attached :avatar
   validates :username, uniqueness: true
+  has_many :user_groups
+  has_many :groups, through: :user_groups
+  has_many :events
 end
