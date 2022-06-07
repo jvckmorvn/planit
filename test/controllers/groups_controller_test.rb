@@ -1,6 +1,11 @@
 require "test_helper"
 
 class GroupsControllerTest < ActionDispatch::IntegrationTest
+
+  # test "the truth" do
+  #   assert true
+  # end
+
   test "should get index" do
     get groups_index_url
     assert_response :success
@@ -10,4 +15,5 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     get groups_create_url
     assert_response :success
   end
+
 end
