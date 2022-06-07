@@ -1,24 +1,23 @@
 require "open-uri"
 
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
-article = Article.new(title: "NES", body: "A great console")
-article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-article.save
-
+# Seed users
 2.times do
-  avatar =
-  User.create(
+  avatar = URI.open("https://picsum.photos/400")
+  user = User.new(
     username: Faker::Internet.username,
     email: Faker::Internet.email,
-    password: "password",
-    avatar: avatar
+    password: "password"
   )
+  user.photo.attach(io: avatar, filename: "profile_picture.jpg", content_type: "image/jpg")
+  user.save!
 end
 
+# Seed groups
 4.times do
-  picture =
-  Group.create(
+  picture = URI.open("https://picsum.photos/600")
+  group = Group.create(
     name: Faker::Hipster.word,
-    picture: picture
   )
+  group.photo.attach(io: picture, filename: "group_picture.jpg", content_type: "image/jpg")
+  group.save!
 end
