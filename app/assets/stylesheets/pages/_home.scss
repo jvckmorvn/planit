@@ -1,1 +1,23 @@
-// Specific CSS for your home-page
+
+.landing-flash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, rgb(13, 19, 59), rgb(71, 8, 96));
+  top: 0;
+  left: 0;
+  animation-name: flashout;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  font-size: 20px;
+  color: white;
+}
+
+@keyframes flashout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
