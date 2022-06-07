@@ -26,9 +26,18 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <span style="color: white;font-size: 20px;margin-right: 12px;">
+          </span>
+          <div class="nav-item dropdown">
+            <img class="avatar dropdown-toggle show" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="/assets/default_user_avatar-860e7bee4205824f8370509d12fe477c19f9eb2a8c175fd1d98f3eb5b514b7ca.jpg">
+            <div class="dropdown-menu dropdown-menu-end show" aria-labelledby="navbarDropdown" data-bs-popper="none">
+              <a class="dropdown-item" href="/">Profile</a>
+              <a class="dropdown-item" href="/">groups</a>
+              <a data-turbo-method="delete" class="dropdown-item" href="/">Log out</a>
+            </div>
+          </div>
+        </div>
         <% end %>
       </ul>
     </div>
