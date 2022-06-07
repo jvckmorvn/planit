@@ -1,0 +1,10 @@
+<h1>My Groups</h1>
+
+<div class="container">
+  <div class="row">
+    <% @groups.each do |group| %>
+      <%= render "group_card", locals: { group: group } %>
+    <% end %>
+    <%= render "form" %>
+  </div>
+</div>
