@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="landing-flash" id="landing-flash-timeout">
+  <div class="logo-img-container">
+    <%= image_tag "logo.png", width: 100 %>
+    <span class="logo-day" id="landing-logo-day"></span>
+  </div>
+  <span>Planit</span>
+
+  <script type="module">
+    const logo = document.getElementById("landing-logo-day");
+    const today = new Date();
+    logo.textContent = today.getDate();
+
+    setTimeout(() => {
+      const landingFlash = document.getElementById("landing-flash-timeout")
+      landingFlash.remove()
+    }, 1000)
+  </script>
+</div>

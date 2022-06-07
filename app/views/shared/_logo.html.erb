@@ -1,0 +1,10 @@
+<div class="logo-img-container">
+  <%= image_tag "logo.png", width: 44 %>
+  <span class="logo-day" id="logo-day"></span>
+</div>
+
+<script type="module">
+  const logo = document.getElementById("logo-day");
+  const today = new Date();
+  logo.textContent = today.getDate();
+</script>
