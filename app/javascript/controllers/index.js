@@ -6,6 +6,3 @@ import { application } from "./application"
 
 import EditGroupController from "./edit_group_controller.js"
 application.register("edit-group", EditGroupController)
-
-import HelloController from "./hello_controller.js"
-application.register("hello", HelloController)

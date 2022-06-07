@@ -7,3 +7,9 @@
     </div>
   </div>
 </div>
+
+
+<%= simple_form_for @group do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit, class: "create-group-btn" %>
+<% end %>
