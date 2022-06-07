@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import EditGroupController from "./edit_group_controller.js"
-application.register("edit-group", EditGroupController)
+import CreateGroupController from "./create_group_controller.js"
+application.register("create-group", CreateGroupController)
