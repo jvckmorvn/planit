@@ -1,0 +1,12 @@
+<p>Add users</p>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search users"
+  %>
+  <%= submit_tag "Search", class: "search-btn" %>
+
+<%= simple_form_for [group, user_group] do |f| %>
+  <%= f.association :user, as: :check_boxes, label_method: :username %>
+  <%= f.submit %>
+<% end %>
