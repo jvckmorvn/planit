@@ -1,11 +1,11 @@
 <div class="col-sm-3">
-   <div class="group-card">
-     <div class="card-body d-flex justify-content-center">
-       <%= simple_form_for @group do |f| %>
+  <div class="group-card">
+    <div class="card-body d-flex justify-content-center">
+      <%= simple_form_for @group do |f| %>
         <%= f.input :name %>
-         <%= f.input :picture, as: :file %>
-         <%= f.button :submit, class: "create-group-btn" %>
-       <% end %>
-     </div>
-   </div>
+        <%= f.input :picture, as: :file %>
+        <%= f.button :submit, class: "submit-btn" %>
+      <% end %>
+    </div>
+  </div>
 </div>

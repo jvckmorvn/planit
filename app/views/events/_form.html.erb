@@ -1,0 +1,9 @@
+<div class="event-card">
+  <div class="card-body d-flex justify-content-center">
+    <%= simple_form_for @event do |f| %>
+    <%= f.input :name %>
+      <%= f.input :picture, as: :file %>
+      <%= f.button :submit, class: "submit-btn" %>
+    <% end %>
+  </div>
+</div>

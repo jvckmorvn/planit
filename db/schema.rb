@@ -78,8 +78,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_112436) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "user_groups", force: :cascade do |t|
@@ -128,7 +126,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_112436) do
   add_foreign_key "days", "events"
   add_foreign_key "events", "groups"
   add_foreign_key "events", "users"
-  add_foreign_key "groups", "users"
   add_foreign_key "user_groups", "groups"
   add_foreign_key "user_groups", "users"
 end
