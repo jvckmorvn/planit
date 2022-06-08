@@ -19,6 +19,13 @@
   box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
+.common-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .form-inputs {
   display: flex;
   flex-direction: column;
