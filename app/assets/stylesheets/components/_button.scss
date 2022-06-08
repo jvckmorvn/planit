@@ -1,24 +1,24 @@
 .submit-btn {
   text-decoration: none;
-  color: #603367;
+  color: white;
   font-size: 16px;
-  background-color: #dfd7e6;
+  background-color: $planit-purple;
   text-align: center;
   border-radius: 24px;
   padding: 4px 24px;
   margin: 4px 2px;
-  border: 2px solid #603367;
+  border: 2px solid $planit-purple;
 }
 
 .submit-btn:hover {
-  background-color: #b4adb9;
+  color: #b4adb9;
 }
 
 .landing-btn {
   width: 200px;
   -webkit-border-radius: 10px;
   border-radius: 48px;
-  color: #FFFFFF;
+  color: white;
   font-size: 24px;
   cursor: pointer;
   display: inline-block;
@@ -35,7 +35,7 @@
   text-decoration: none;
   color: #dfd7e6;
   font-size: 20px;
-  background-color: #603367;
+  background-color: $planit-purple;
   text-align: center;
   border-radius: 24px;
   padding: 4px 24px;
