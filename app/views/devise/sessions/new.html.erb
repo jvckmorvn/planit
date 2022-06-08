@@ -1,7 +1,6 @@
-<div class="landing-sign-in">
+<div class="align-form">
   <div class="common-form">
     <h2>Log in</h2>
-
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,
@@ -14,19 +13,11 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-<<<<<<< Updated upstream
-    <div class="form-actions" >
-      <%= f.button :submit, "Log in", class: "submit-btn" %>
-    </div>
-  <% end %>
 
-  <%= render "devise/shared/links" %>
-=======
       <div class="form-actions" >
         <%= f.button :submit, "Log in", class: "submit-btn" %>
         <p class="mt-3">Don't have an account yet? <%= link_to "Sign up", new_user_registration_path %></p>
       </div>
     <% end %>
   </div>
->>>>>>> Stashed changes
 </div>

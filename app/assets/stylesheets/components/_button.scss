@@ -13,14 +13,12 @@
 .landing-btn {
   width: 200px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: none;
+  border-radius: 48px;
   color: #FFFFFF;
+  font-size: 24px;
   cursor: pointer;
   display: inline-block;
-  font-family: Arial;
-  font-size: 20px;
-  padding: 5px 10px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
   -webkit-animation: glowing 1500ms infinite;
@@ -31,24 +29,24 @@
 
 @-webkit-keyframes glowing {
   0% { background-color: rgb(76,22,82); -webkit-box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); -webkit-box-shadow: 0 0 30px rgb(102, 37, 110); }
+  50% { background-color: rgb(102, 37, 110); -webkit-box-shadow: 0 0 10px rgb(102, 37, 110); }
   100% { background-color: rgb(76,22,82); -webkit-box-shadow: 0 0 3px rgb(76,22,82); }
 }
 
 @-moz-keyframes glowing {
   0% { background-color: rgb(76,22,82); -moz-box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); -moz-box-shadow: 0 0 30px rgb(102, 37, 110); }
-  100% { background-color: hsl(102, 37, 110); -moz-box-shadow: 0 0 3px rgb(76,22,82); }
+  50% { background-color: rgb(102, 37, 110); -moz-box-shadow: 0 0 10px rgb(102, 37, 110); }
+  100% { background-color: rgb(76,22,82); -moz-box-shadow: 0 0 3px rgb(76,22,82); }
 }
 
 @-o-keyframes glowing {
   0% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 30px rgb(102, 37, 110); }
-  100% { background-color: rgb(102, 37, 110); box-shadow: 0 0 3px rgb(76,22,82); }
+  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 10px rgb(102, 37, 110); }
+  100% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
 }
 
 @keyframes glowing {
   0% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 30px rgb(102, 37, 110); }
+  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 10px rgb(102, 37, 110); }
   100% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
 }

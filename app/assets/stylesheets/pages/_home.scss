@@ -1,11 +1,11 @@
 .landing {
+  text-decoration: none;
   color: white;
-  font-size: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 .slogan {
@@ -17,50 +17,29 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-}
-
-.landing-link {
-  text-decoration: none;
-  color: white;
-  font-size: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-  text-align: center;
-  border-radius: 24px;
-  padding: 4px 24px;
-  margin: 20px;
-  border: 2px solid #603367;
-}
-
-
-.landing-flash {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, rgb(13, 19, 59), rgb(71, 8, 96));
-  top: 0;
-  left: 0;
-  animation-name: flashout;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  font-size: 36px;
-  color: white;
+  margin-top: 40px;
 }
 
 #landing-logo-day {
-  font-size: 36px;
+  font-size: 60px;
   font-weight: bolder;
 }
 
-@keyframes flashout {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+body {
+	background: linear-gradient(-45deg, #481380, #7F78D2, #EFB1FF, #FFE2FF);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

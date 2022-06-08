@@ -1,32 +1,21 @@
-<div class="landing-flash" id="landing-flash-timeout">
+<div class="landing">
   <div class="logo-img-container">
-    <%= image_tag "logo.png", width: 100 %>
+    <%= image_tag "logo.png", width: 200 %>
     <span class="logo-day" id="landing-logo-day"></span>
   </div>
-  <span >Planit</span>
-
   <script type="module">
     const logo = document.getElementById("landing-logo-day");
     const today = new Date();
     logo.textContent = today.getDate();
-
-    setTimeout(() => {
-      const landingFlash = document.getElementById("landing-flash-timeout")
-      landingFlash.remove()
-    }, 1000)
   </script>
-</div>
-<<<<<<< Updated upstream
  <%# background-image: linear-gradient(to bottom right, rgb(13, 19, 59), rgb(71, 8, 96)); %>
-=======
 
-<div class="landing">
+
   <h1 class="slogan">Let's Planit!</h1>
     <li class="nav-item">
-      <%= link_to "Log in", new_user_session_path, class: "landing-link landing-btn" %>
+      <%= link_to "Log in", new_user_session_path, class: "landing landing-btn" %>
     </li>
     <li class="nav-item">
-      <%= link_to "Sign up", new_user_registration_path, class: "landing-link landing-btn" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "landing landing-btn" %>
     </li>
 </div>
->>>>>>> Stashed changes
