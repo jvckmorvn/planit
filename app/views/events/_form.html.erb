@@ -1,13 +1,9 @@
-<div class="event-form">
-  <div class="card-body d-flex justify-content-center">
-    <%= simple_form_for [ @group, @event ] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :colour %>
-      <%= f.input :address,
-      input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
-      wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
-      %>
-      <%= f.button :submit, class: "submit-btn" %>
-    <% end %>
-  </div>
-</div>
+<%= simple_form_for [ @group, @event ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :colour %>
+  <%= f.input :address,
+  input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
+  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}, style: "width: 80%;"}
+  %>
+  <%= f.button :submit, class: "submit-btn" %>
+<% end %>
