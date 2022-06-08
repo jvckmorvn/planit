@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+
+# Seed users
+2.times do
+  avatar = URI.open("https://picsum.photos/400")
+  user = User.new(
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: "password"
+  )
+  user.photo.attach(io: avatar, filename: "profile_picture.jpg", content_type: "image/jpg")
+  user.save!
+end
+
+# Seed groups
+4.times do
+  picture = URI.open("https://picsum.photos/600")
+  group = Group.create(
+    name: Faker::Hipster.word,
+  )
+  group.photo.attach(io: picture, filename: "group_picture.jpg", content_type: "image/jpg")
+  group.save!
+end

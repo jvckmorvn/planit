@@ -1,6 +1,13 @@
-.planit-navbar {
-  display: flex;
-  align-items: center;
+.navbar-planit {
   background-color: #dfd8e6;
   padding: 12px;
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+
+    .navbar-buttons {
+      display: right;
+    }
+  }
 }
