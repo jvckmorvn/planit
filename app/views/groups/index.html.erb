@@ -5,7 +5,7 @@
     <% @groups.each do |group| %>
       <%= render "group_card", locals: { group: group } %>
     <% end %>
-    <%= render "form" %>
+    <%= render "form", locals: { group: @group } %>
   </div>
 </div>
 
