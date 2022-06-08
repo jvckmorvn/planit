@@ -3,32 +3,8 @@
 <div class="container">
   <div class="row">
     <% @groups.each do |group| %>
-      <%= render "group_card", locals: { group: group } %>
+      <%= render "group_card", group: group %>
     <% end %>
-    <%= render "form", locals: { group: @group } %>
-  </div>
-</div>
-
-
-<h1> My Groupe </h1>
-<div class="container">
- <div class="cards">
-   <% if current_user.avatar.attached? %>
-      <div class= "card">
-        <div class="group-display mt-4">
-          <% @groups.each do |group| %>
-          <%= link_to group_path(group), style: "text-decoration: none; color: black;" do %>
-              <div class="group-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path group.photos[0].key %>)">
-              </div>
-              <div class="info-group-card">
-                <p>
-                  <i class="fa-solid fa-group"></i> <strong> <%= group.name %></strong>
-                </p>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+    <%= render "form", group: @group %>
   </div>
 </div>
