@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     if @group.save
       UserGroup.create(user_id: current_user.id, group: @group, is_creator: true)
-      redirect_to groups_path
+      redirect_to group_path(@group)
     else
       render :new, status: :unprocessable_entity
     end
