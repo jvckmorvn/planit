@@ -1,29 +1,46 @@
-.landing-flash {
+//link not working
+//form not centered
+
+.landing {
+  text-decoration: none;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, rgb(13, 19, 59), rgb(71, 8, 96));
-  top: 0;
-  left: 0;
-  animation-name: flashout;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  font-size: 36px;
+  margin-top: 10%;
+}
+
+.slogan {
   color: white;
+  text-shadow: 2px 2px #2f2e2e;
+  font-size: 160px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-#landing-logo-day {
-  font-size: 36px;
-  font-weight: bolder;
+body {
+  background: linear-gradient(-45deg, #FFE2FF, #EFB1FF, #7F78D2, #481380);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
 
-@keyframes flashout {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 body {

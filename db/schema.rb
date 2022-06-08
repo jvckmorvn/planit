@@ -87,6 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_112436) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_creator", default: false
     t.index ["group_id"], name: "index_user_groups_on_group_id"
     t.index ["user_id"], name: "index_user_groups_on_user_id"
   end
