@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <div class="m-3">
-      <%= render "shared/flashes" %>
-      <%= yield %>
-    </div>
+    <% if !@hide_nav %>
+      <%= render "shared/navbar" %>
+    <% end %>
+    <%# <%= render "shared/flashes" %>
+    <%= yield %>
   </body>
 </html>

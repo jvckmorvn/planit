@@ -1,22 +1,28 @@
-<div class="landing-flash" id="landing-flash-timeout">
+<div class="landing">
   <div class="logo-img-container">
-    <%= image_tag "logo.png", width: 100 %>
+    <p id="landing-logo-month"></p>
+    <script type="module">
+      const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const d = new Date();
+      let name = month[d.getMonth()];
+      document.getElementById("landing-logo-month").innerHTML = name;
+    </script>
+
+    <%= image_tag "logo.png", width: 200 %>
     <span class="logo-day" id="landing-logo-day"></span>
   </div>
-  <span >Planit</span>
 
   <script type="module">
     const logo = document.getElementById("landing-logo-day");
     const today = new Date();
     logo.textContent = today.getDate();
-
-    setTimeout(() => {
-      const landingFlash = document.getElementById("landing-flash-timeout")
-      landingFlash.remove()
-    }, 1000)
   </script>
-</div>
 
-<div class="d-flex flex-column justify-content-center w-100 h-100">
- <%# Boram! You can put login form here!%>
+  <h1 class="slogan">Let's Planit!</h1>
+    <li class="nav-item">
+      <%= link_to "Log in", new_user_session_path, class: "landing landing-btn" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Sign up", new_user_registration_path, class: "landing landing-btn" %>
+    </li>
 </div>
