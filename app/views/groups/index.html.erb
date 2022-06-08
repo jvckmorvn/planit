@@ -3,8 +3,8 @@
 <div class="container">
   <div class="row">
     <% @groups.each do |group| %>
-      <%= render "group_card", locals: { group: group } %>
+      <%= render "group_card", group: group %>
     <% end %>
-    <%= render "form" %>
+    <%= render "form", group: @group %>
   </div>
 </div>
