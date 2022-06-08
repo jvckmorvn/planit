@@ -19,11 +19,10 @@
       <% end %>
       <%# render "/events/form", event: @event %>
     </div>
-    <div class="col-10 border" data-target="calendar">
-      <%# render Calendar %>
-    </div>
-    <div class="col-10 border" data-target="map">
-      <%# render Map %>
+    <div class="col-10 border">
+      <%# render Calendar/Map partial %>
+      <h3 data-target="calendar">Big Calendar!</h3>
+      <h3 data-target="map" class="d-none">Big Map!</h3>
     </div>
   </div>
 </div>

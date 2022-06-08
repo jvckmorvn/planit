@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="show-map"
 export default class extends Controller {
-  static targets = ["calendar", "map"]
+  static targets = [ "calendar", "map" ]
 
   connect() {
     console.log("switch-tabs controller connected");
