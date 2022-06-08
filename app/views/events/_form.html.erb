@@ -3,14 +3,11 @@
     <%= simple_form_for @event do |f| %>
       <%= f.input :name %>
       <%= f.input :colour %>
-      <%= f.input :address %>
+      <%= f.input :address,
+      input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
+      wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+      %>
       <%= f.button :submit, class: "submit-btn" %>
     <% end %>
   </div>
 </div>
-
-<%# t.string "name"
-t.string "colour"
-t.date "locked_start"
-t.date "locked_end"
-t.string "address" %>
