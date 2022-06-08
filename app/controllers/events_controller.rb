@@ -8,10 +8,11 @@ class EventsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
-    private
-
-    def event_params
-      params.require(:event).permit()
-    end
   end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:name, :colour, :address)
+  end
+end

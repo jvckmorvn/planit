@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container" data-controller="switch-tabs">
   <div class="row">
     <div class="col-2 border">
       <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
       <h3><%= @group.name %></h3>
       <p>All events</p>
     </div>
-    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;">
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showCalendar">
       <p>Calendar</p>
     </div>
-    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;">
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showMap">
       <p>Map</p>
     </div>
   </div>
@@ -19,8 +19,11 @@
       <% end %>
       <%# render "/events/form", event: @event %>
     </div>
-    <div class="col-10 border">
-      <%# render Calendar/Map %>
+    <div class="col-10 border" data-target="calendar">
+      <%# render Calendar %>
+    </div>
+    <div class="col-10 border" data-target="map">
+      <%# render Map %>
     </div>
   </div>
 </div>

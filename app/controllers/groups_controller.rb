@@ -8,8 +8,6 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @events = Event.all
     @event = Event.new
-    @event.user = current_user
-    @event.group = @group
   end
 
   def create
