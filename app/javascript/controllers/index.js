@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import CreateGroupController from "./create_group_controller.js"
 application.register("create-group", CreateGroupController)
+
+import SwitchTabsController from "./switch_tabs_controller.js"
+application.register("switch-tabs", SwitchTabsController)

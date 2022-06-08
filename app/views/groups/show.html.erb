@@ -1,2 +1,33 @@
+<<<<<<< HEAD
+<div class="container" data-controller="switch-tabs">
+  <div class="row">
+    <div class="col-2 border">
+      <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
+      <h3><%= @group.name %></h3>
+      <p>All events</p>
+    </div>
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showCalendar">
+      <p><strong>Calendar</strong></p>
+    </div>
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showMap">
+      <p><strong>Map</strong></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 border">
+      <% @events.each do %>
+        <%= render "/events/card", event: event %>
+      <% end %>
+      <%# render "/events/form", event: @event %>
+    </div>
+    <div class="col-10 d-flex justify-content-center border">
+      <%# render Calendar/Map partial %>
+      <h3 data-switch-tabs-target="calendar">Big Calendar!</h3>
+      <h3 data-switch-tabs-target="map" class="d-none">Big Map!</h3>
+    </div>
+  </div>
+</div>
+=======
 
 <h1><%= @group.name %> show page</h1>
+>>>>>>> d7bf07445bf84bb8a0a2dc8a43fd0b85f92ab609
