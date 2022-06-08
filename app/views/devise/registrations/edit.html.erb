@@ -1,7 +1,7 @@
 <div class="align-form">
   <div class="common-form">
     <div class="m-3 my-4">
-      <div>
+      <div class="align-form">
         <% if current_user.avatar.attached? %>
           <%= cl_image_tag current_user.avatar.key, class: "border border-secondary avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <% else %>
@@ -26,11 +26,11 @@
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
         </div>
-        <div class="form-actions">
+        <div class="form-actions align-form">
           <%= f.button :submit, "Update", class: "submit-btn" %>
         </div>
       <% end %>
-      <div class="form-actions my-4">
+      <div class="form-actions mt-4 align-form">
         <h3 class="mb-3">DANGER ZONE <i class="fa-solid fa-bolt"></i></h3>
         <p><%= link_to "Delete my account", registration_path(resource_name), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "delete-btn" %></p>
       </div>
