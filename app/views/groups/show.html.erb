@@ -6,10 +6,10 @@
       <p>All events</p>
     </div>
     <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showCalendar">
-      <p>Calendar</p>
+      <p><strong>Calendar</strong></p>
     </div>
     <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;" data-action="click->switch-tabs#showMap">
-      <p>Map</p>
+      <p><strong>Map</strong></p>
     </div>
   </div>
   <div class="row">
@@ -19,10 +19,10 @@
       <% end %>
       <%# render "/events/form", event: @event %>
     </div>
-    <div class="col-10 border">
+    <div class="col-10 d-flex justify-content-center border">
       <%# render Calendar/Map partial %>
-      <h3 data-target="calendar">Big Calendar!</h3>
-      <h3 data-target="map" class="d-none">Big Map!</h3>
+      <h3 data-switch-tabs-target="calendar">Big Calendar!</h3>
+      <h3 data-switch-tabs-target="map" class="d-none">Big Map!</h3>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="show-map"
+// Connects to data-controller="switch-tabs"
 export default class extends Controller {
   static targets = [ "calendar", "map" ]
 
