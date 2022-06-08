@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   def create
+    @group = Group.find(params[:group_id])
     @event = Event.new(event_params)
     @event.user = current_user
     @event.group = @group
