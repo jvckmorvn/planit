@@ -1,3 +1,6 @@
+//link not working
+//form not centered
+
 .landing {
   text-decoration: none;
   color: white;
@@ -10,6 +13,7 @@
 
 .slogan {
   color: white;
+  text-shadow: 2px 2px #2f2e2e;
   font-size: 160px;
   font-weight: bold;
   display: flex;
@@ -20,13 +24,8 @@
   margin-top: 40px;
 }
 
-#landing-logo-day {
-  font-size: 60px;
-  font-weight: bolder;
-}
-
 body {
-	background: linear-gradient(-45deg, #481380, #7F78D2, #EFB1FF, #FFE2FF);
+  background: linear-gradient(-45deg, #FFE2FF, #EFB1FF, #7F78D2, #481380);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
