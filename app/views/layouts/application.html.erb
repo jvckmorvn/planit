@@ -11,15 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <div class="m-3">
-      <%= render "shared/flashes" %>
-      <%= yield %>
-    </div>
-    <footer class="d-flex justify-content-center list-unstyled" style="background-color: #F9F9F9;">
-      <li class="mx-5 my-4"><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-      <li class="mx-5 my-4"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-      <li class="mx-5 my-4"><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-    </footer>
+    <% if !@hide_nav %>
+      <%= render "shared/navbar" %>
+    <% end %>
+    <%# <%= render "shared/flashes" %>
+    <%= yield %>
   </body>
 </html>

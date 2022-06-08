@@ -1,18 +1,20 @@
-.landing-sign-in {
-  display: flex;
-  justify-content: center;
-}
-
-.common-form {
+.align-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
+}
+
+.common-form {
+  // background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(244, 244, 244, 0.8);
   padding: 8px 12px;
   border-radius: 4px;
-  // margin-left: 24px;
   width: 400px;
 }
 
