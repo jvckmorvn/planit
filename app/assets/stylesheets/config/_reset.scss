@@ -10,3 +10,10 @@ a {
 li {
   list-style: none;
 }
+
+body {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}
