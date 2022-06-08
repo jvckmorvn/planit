@@ -1,25 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-2">
-      <%= cl_image_tag @group.picture.key, class: "avatar-bordered" %>
+    <div class="col-2 border">
+      <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
       <h3><%= @group.name %></h3>
       <p>All events</p>
     </div>
-    <div class="col-5">
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;">
       <p>Calendar</p>
     </div>
-    <div class="col-5">
+    <div class="col-5 d-flex justify-content-center align-items-center border" style="height: 40%;">
       <p>Map</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-2">
+    <div class="col-2 border">
       <% @events.each do %>
         <%= render "/events/card", event: event %>
       <% end %>
       <%# render "/events/form", event: @event %>
     </div>
-    <div class="col-10">
+    <div class="col-10 border">
       <%# render Calendar/Map %>
     </div>
   </div>
