@@ -2,9 +2,28 @@
 
 <div class="container">
   <div class="row">
+<<<<<<< HEAD
     <% @groups.each do |group| %>
       <%= render "card", group: group %>
     <% end %>
     <%= render "form", group: @group %>
   </div>
+=======
+    <div class="col-12 col-lg-8">
+      <div class="group-card">
+        <% @groups.each do |group| %>
+          <%= render "group_card", group: group %>
+        <% end %>
+     </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+    <div class="create-form mt-4">
+ <%= render "form", group: @group %>
+</div>
+    </div>
+
+  </div>
+
+>>>>>>> d7bf07445bf84bb8a0a2dc8a43fd0b85f92ab609
 </div>
