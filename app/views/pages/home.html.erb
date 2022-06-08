@@ -1,15 +1,22 @@
 <div class="landing">
   <div class="logo-img-container">
+    <p id="landing-logo-month"></p>
+    <script type="module">
+      const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const d = new Date();
+      let name = month[d.getMonth()];
+      document.getElementById("landing-logo-month").innerHTML = name;
+    </script>
+
     <%= image_tag "logo.png", width: 200 %>
     <span class="logo-day" id="landing-logo-day"></span>
   </div>
+
   <script type="module">
     const logo = document.getElementById("landing-logo-day");
     const today = new Date();
     logo.textContent = today.getDate();
   </script>
- <%# background-image: linear-gradient(to bottom right, rgb(13, 19, 59), rgb(71, 8, 96)); %>
-
 
   <h1 class="slogan">Let's Planit!</h1>
     <li class="nav-item">

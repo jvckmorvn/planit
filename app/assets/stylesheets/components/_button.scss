@@ -10,6 +10,10 @@
   border: 2px solid #603367;
 }
 
+.submit-btn:hover {
+  background-color: #b4adb9;
+}
+
 .landing-btn {
   width: 200px;
   -webkit-border-radius: 10px;
@@ -60,4 +64,8 @@
   0% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
   50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 10px rgb(102, 37, 110); }
   100% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
+}
+
+.landing-btn:hover {
+  color: #dfd8e6;
 }
