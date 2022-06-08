@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <% @groups.each do |group| %>
-      <%= render "group_card", group: group %>
+      <%= render "card", group: group %>
     <% end %>
     <%= render "form", group: @group %>
   </div>

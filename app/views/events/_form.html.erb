@@ -1,9 +1,16 @@
 <div class="event-card">
   <div class="card-body d-flex justify-content-center">
     <%= simple_form_for @event do |f| %>
-    <%= f.input :name %>
-      <%= f.input :picture, as: :file %>
+      <%= f.input :name %>
+      <%= f.input :colour %>
+      <%= f.input :address %>
       <%= f.button :submit, class: "submit-btn" %>
     <% end %>
   </div>
 </div>
+
+<%# t.string "name"
+t.string "colour"
+t.date "locked_start"
+t.date "locked_end"
+t.string "address" %>
