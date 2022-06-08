@@ -17,7 +17,7 @@
       <% @events.each do %>
         <%= render "/events/card", event: event %>
       <% end %>
-      <%# render "/events/form", event: @event %>
+      <%= render "/events/form", event: @event %>
     </div>
     <div class="col-10 d-flex justify-content-center border">
       <div data-switch-tabs-target="calendar"><%= render "/events/calendar" %></div>
