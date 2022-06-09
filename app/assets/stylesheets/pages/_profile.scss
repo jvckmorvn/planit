@@ -1,0 +1,39 @@
+.avatar-container {
+  position: relative;
+  padding-top: 20px;
+}
+
+.avatar-container-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-camera {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.avatar-camera input {
+  display: none;
+}
+
+.avatar-camera-label {
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #47114e;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-3 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

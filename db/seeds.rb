@@ -1,5 +1,10 @@
 require "open-uri"
 
+if Rails.env.development?
+  User.destroy_all
+  Group.destroy_all
+end
+
 # Seed users
 2.times do
   avatar = URI.open("https://picsum.photos/400")
@@ -8,7 +13,7 @@ require "open-uri"
     email: Faker::Internet.email,
     password: "password"
   )
-  user.photo.attach(io: avatar, filename: "profile_picture.jpg", content_type: "image/jpg")
+  user.avatar.attach(io: avatar, filename: "profile_picture.jpg", content_type: "image/jpg")
   user.save!
 end
 
@@ -18,6 +23,6 @@ end
   group = Group.create(
     name: Faker::Hipster.word,
   )
-  group.photo.attach(io: picture, filename: "group_picture.jpg", content_type: "image/jpg")
+  group.picture.attach(io: picture, filename: "group_picture.jpg", content_type: "image/jpg")
   group.save!
 end

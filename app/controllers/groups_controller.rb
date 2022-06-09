@@ -6,6 +6,16 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @user_group = UserGroup.new
+    @events = Event.all
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        info_window: render_to_string(partial: "events/info_window", locals: {event: event})
+      }
+    end
+    @event = Event.new
   end
 
   def create
@@ -16,6 +26,12 @@ class GroupsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    redirect_to group_path(@group), status: :see_other
   end
 
   private
