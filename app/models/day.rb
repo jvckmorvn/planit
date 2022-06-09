@@ -2,15 +2,26 @@ class Day < ApplicationRecord
   belongs_to :event
   has_many :day_votes, dependent: :destroy
 
-  def change_opacity
+  def date_marker
+    # calculate number of users in current group
     group = self.event.group
-    colour = self.event.colour
     user_ids = UserGroup.where(group: group).distinct.pluck(:user_id)
     user_count = user_ids.count
-    p user_count
-    # for each day in event, find number of votes
-    # divide total no. of day_votes by user_count
+    # divide total no. of day_votes for each day by number of users in the group
+    if self.day_votes == 0
+      opacity = 0
+    else
+      ratio = self.day_votes / user_count
     # round result to nearest tenth
-    # use result to set opacity value in style attribute of div containing each day
+      opacity = ratio.round(1)
+    end
+    # use result to set opacity value in inline style attribute of circular marker div within each day
+    colour = self.event.colour
+    return { colour: colour, opacity: opacity }
   end
 end
+
+# e.g.
+# <div class="day">
+#   <div style="width: 30px; height: 30px; border-radius: 50%; background-color: <%= day.date_marker.colour %>; opacity: <%= day.date_marker.opacity %>"></div>
+# </div>
