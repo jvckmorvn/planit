@@ -3,19 +3,21 @@
 <div class="container" data-controller="switch-tabs">
   <div class="row">
     <div class="col-2 border">
-      <div class="d-flex flex-column align-items-center">
-        <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
-        <h3><%= @group.name %></h3>
+      <div class="group-image  m-4 d-flex flex-column align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @group.picture.key %>)">
+        <%# <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
       </div>
-      <div class="d-flex justify-content-around">
-        <p>
-          <i class="fa-solid fa-user-group"></i> <%= @group.users.count %>
+        <div class="group-name"><%= @group.name %></div>
+
+        <div class="d-flex justify-content-around">
+         <p>
+           <i class="fa-solid fa-user-group"></i> <%= @group.users.count %>
         </p>
         |
-        <p>
-          <i class="fa-solid fa-calendar-check"></i> <%= @events.count %>
-        </p>
-      </div>
+          <p>
+            <i class="fa-solid fa-calendar-check"></i> <%= @events.count %>
+          </p>
+        </div>
+
     </div>
     <div class="col-5 d-flex justify-content-center align-items-center border tab active-tab" style="height: 40%;" data-switch-tabs-target="caltab" data-action="click->switch-tabs#showCalendar">
       <p><strong>Calendar</strong></p>
