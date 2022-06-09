@@ -1,21 +1,9 @@
 <h1>My Groups</h1>
-<div class="groups-container">
-
+<div class="groups-container p-3">
   <% @groups.each do |group| %>
-    <%= link_to group_path(group), class: "group-card-1" do %>
-      <div class="group-card-image" style="background-image: url('<%= cl_image_path group.picture.key %>');"></div>
-
-      <div class="group-card-info">
-        <h5 class="group-card-title"><%= group.name %></h5>
-        <p class="group-card-subtitle"><strong><%= group.users.count %></strong> members</p>
-      </div>
-    <% end %>
+    <%= render "card", group: group %>
   <% end %>
   <div class="group-card-1 group-form-container ">
-    <%= simple_form_for @group do |f| %>
-      <%= f.input :name %>
-      <%= f.input :picture, as: :file %>
-      <%= f.button :submit, class: "submit-btn" %>
-    <% end %>
+    <%= render "form", group: @group %>
   </div>
 </div>
