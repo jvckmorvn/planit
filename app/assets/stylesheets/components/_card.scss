@@ -1,9 +1,14 @@
+.container{
+  //あとで消す。目安のために作成しただけ
+  background-color: rgba(244, 244, 244, 0.8);
+}
+
 .group-card {
   background-color: rgba(244, 244, 244, 0.8);
   border-radius: 4px;
   box-shadow: 1px 1px 6px #888888;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-
+  margin-top: 10px;
 }

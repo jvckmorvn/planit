@@ -1,10 +1,16 @@
 <h1>My Groups</h1>
 
-<div class="container">
-  <div class="row">
-    <% @groups.each do |group| %>
-      <%= render "group_card", group: group %>
-    <% end %>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <div class="group-card">
+      <% @groups.each do |group| %>
+        <%= render "card", group: group %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-lg-4">
+  <div class="create-form mt-4">
     <%= render "form", group: @group %>
   </div>
 </div>

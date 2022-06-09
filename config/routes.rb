@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :groups, only: %i[index create show destroy] do
     resources :user_groups, only: %i[create destroy]
+    resources :events, only: :create
   end
-  get "profile", to: "pages#profile"
 end

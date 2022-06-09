@@ -8,6 +8,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 @import "simple_calendar";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 // Your CSS partials
 @import "components/index";
@@ -16,5 +17,4 @@
 
 //Simple calendar
 @import "simple_calendar";
-
 @import "pages/home";
