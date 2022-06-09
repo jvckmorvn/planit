@@ -5,6 +5,8 @@
   align-items: center;
   position: relative;
   flex: 1;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .common-form {
@@ -17,6 +19,14 @@
   border-radius: 4px;
   width: 400px;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: absolute;
+}
+
+.common-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .form-inputs {
