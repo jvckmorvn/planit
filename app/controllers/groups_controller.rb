@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
       {
         lat: event.latitude,
         lng: event.longitude,
-        info_window: render_to_string(partial: "events/info_window", locals: {event: event})
+        info_window: render_to_string(partial: "events/info_window", locals: { event: event })
       }
     end
     @event = Event.new
