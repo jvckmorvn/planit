@@ -2,6 +2,7 @@
   <div class="group-card-image" style="background-image: url('<%= cl_image_path group.picture.key %>');"></div>
   <div class="group-card-info">
     <h5 class="group-card-title"><%= group.name %></h5>
-    <p class="group-card-subtitle"><strong><%= group.users.count %></strong> members</p>
+    <p class="group-card-subtitle"><strong><%= group.users.count %></strong> <%= "member".pluralize(group.users.count) %></p>
+    <p class="group-card-subtitle"><strong><%= group.events.count %></strong> <%= "event".pluralize(group.events.count) %></p>
   </div>
 <% end %>
