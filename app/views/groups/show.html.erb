@@ -1,6 +1,5 @@
 <%# render "user_groups/form", group: @group, user_group: @user_group %>
-
-<div class="container" data-controller="switch-tabs">
+<div class="container" data-controller="switch-tabs" style="width: 100vw">
   <div class="row">
     <div class="col-2 border">
       <div class="d-flex flex-column align-items-center">
@@ -9,7 +8,7 @@
       </div>
       <div class="d-flex justify-content-around">
         <p>
-          <i class="fa-solid fa-user-group"></i> <%= @group.users.count %>
+          <%= link_to new_group_user_group_path(@group) do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
         </p>
         |
         <p>
