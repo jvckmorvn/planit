@@ -1,14 +1,4 @@
-<div>
-  <p>Add users</p>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search users"
-    %>
-    <%= submit_tag "Search", class: "search-btn" %>
-
-  <%= simple_form_for [@group, @user_group] do |f| %>
-    <%= f.input :user_id, collection: User.all, label_method: :username, input_html: {multiple: true, data: {controller: 'select2', select2_options_value: {tags: true}}} %>
-    <%= f.submit %>
-  <% end %>
-</div>
+<%= simple_form_for [@group, @user_group] do |f| %>
+  <%= f.input :user_id, collection: User.all, label_method: :username, input_html: {multiple: true, data: {controller: 'select2', select2_options_value: {tags: true}}} %>
+  <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
+<% end %>

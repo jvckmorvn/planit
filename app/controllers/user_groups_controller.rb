@@ -12,6 +12,9 @@ class UserGroupsController < ApplicationController
     redirect_to group_path(@group)
   end
 
+  def destroy
+  end
+
   private
 
   def user_group_params
