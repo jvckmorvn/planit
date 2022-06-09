@@ -1,6 +1,5 @@
 <h1>My Groups</h1>
-<div class="groups-container">
-
+<div class="groups-container p-3">
   <% @groups.each do |group| %>
     <%= link_to group_path(group), class: "group-card-1" do %>
       <div class="group-card-image" style="background-image: url('<%= cl_image_path group.picture.key %>');"></div>
@@ -11,13 +10,10 @@
       </div>
     <% end %>
         <p><%= link_to raw("<i class='fa-solid fa-xmark'></i>"), groups_path(@group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-decoration-none" %></p>
+    <%= render "card", group: group %>
   <% end %>
 
-  <div class="group-card-1 group-form-container ">
-    <%= simple_form_for @group do |f| %>
-      <%= f.input :name %>
-      <%= f.input :picture, as: :file %>
-      <%= f.button :submit, class: "submit-btn" %>
-    <% end %>
+  <div class="group-card-1 group-form-container ">3
+    <%= render "form", group: @group %>
   </div>
 </div>
