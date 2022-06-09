@@ -10,7 +10,9 @@
         <p class="group-card-subtitle"><strong><%= group.users.count %></strong> members</p>
       </div>
     <% end %>
+        <p><%= link_to raw("<i class='fa-solid fa-xmark'></i>"), groups_path(@group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-decoration-none" %></p>
   <% end %>
+
   <div class="group-card-1 group-form-container ">
     <%= simple_form_for @group do |f| %>
       <%= f.input :name %>
