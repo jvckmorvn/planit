@@ -10,6 +10,9 @@ application.register("address-autocomplete", AddressAutocompleteController)
 import CreateGroupController from "./create_group_controller.js"
 application.register("create-group", CreateGroupController)
 
+import Select2Controller from "./select2_controller.js"
+application.register("select2", Select2Controller)
+
 import MapController from "./map_controller.js"
 application.register("map", MapController)
 
