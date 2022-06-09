@@ -1,6 +1,12 @@
 <%= simple_form_for [ @group, @event ] do |f| %>
+  <%= f.input :colour,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'colour-wrapper',
+            item_wrapper_class: 'colour-item',
+            input_html: {class: 'colour-selector'},
+            collection: Event::COLOURS %>
   <%= f.input :name %>
-  <%= f.input :colour %>
   <%= f.input :address,
   input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
   wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}, style: "width: 80%;"}
