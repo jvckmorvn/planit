@@ -32,6 +32,7 @@ gem "pg_search"
 
 # Calendar-building gem
 gem "simple_calendar", "~> 2.4"
+gem 'rails-i18n'
 
 # Geocoding gem to convert addresses into GPS coordinates
 gem "geocoder"
