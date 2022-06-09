@@ -1,5 +1,10 @@
 require "open-uri"
 
+if Rails.env.development?
+  User.destroy_all
+  Group.destroy_all
+end
+
 # Seed users
 2.times do
   avatar = URI.open("https://picsum.photos/400")
