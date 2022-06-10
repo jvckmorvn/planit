@@ -18,16 +18,16 @@
   margin-bottom: 12px;
 }
 
-.group-channel-event {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-top: 1px solid $planit-white;
-  background-color: white;
-  margin-left: -12px;
-  margin-right: -12px;
-}
+// .group-channel-event {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 12px;
+//   border-top: 1px solid $planit-white;
+//   background-color: white;
+//   margin-left: -12px;
+//   margin-right: -12px;
+// }
 
 .group-channel-row {
   display: flex;
@@ -72,9 +72,9 @@
 
     th {
       text-align: center;
-      color: white;
-      text-shadow: 0 0 black;
+      color: black;
       padding: 12px;
+      background-color: white;
       border-bottom: none;
     }
 
@@ -96,18 +96,21 @@
     .wday-5 {}
     .wday-6 {}
 
-    .today {}
+    .today {
+      background-color: $planit-purple-light;
+      // border: 1px solid black;
+    }
     .past {}
     .future {}
 
     .start-date {}
 
     .prev-month {
-      background: #f8f6f6;
+      color: rgb(130, 129, 129);
     }
 
     .next-month {
-      background: #f8f6f6;
+      color: rgb(130, 129, 129);
     }
 
     .current-month {}
