@@ -5,7 +5,7 @@
     <div class="ms-2"><%= event.name %></div>
     <div class="ms-2"><%= event.locked ? "🔒" : "" %></div>
   </div>
-  <%# <div class="d-flex align-items-center">
+  <%# <div class="d-flex align-items-center"> %>
     <%# <div><%= cl_image_tag event.user.avatar.key, class: "avatar-small" %>
   <%# </div> %>
   <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), group_event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
