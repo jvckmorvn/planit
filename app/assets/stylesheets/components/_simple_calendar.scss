@@ -1,23 +1,146 @@
-.simple-calendar {
-  .day {}
+.group-container {
+  display: flex;
+  align-items: stretch;
+  height: calc(100vh - 72px);
+}
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+.group-channel {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 12px;
+  border-right: 1px solid $planit-white;
+}
 
-  .today {}
-  .past {}
-  .future {}
+.group-channel-events-container {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
 
-  .start-date {}
+.group-channel-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid $planit-white;
+  background-color: white;
+  margin-left: -12px;
+  margin-right: -12px;
+}
 
-  .prev-month {}
-  .next-month { }
-  .current-month {}
+.group-channel-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  align-items: center;
+}
 
-  .has-events {}
+.group-channel-row:last-child {
+  border-bottom: 1px solid $planit-white;
+}
+
+.group-channel-create {
+  border: 1px solid $planit-white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.group-channel-create form {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.group-channel-link {
+  color: black;
+}
+
+.group-channel-link:hover {
+  color: black;
+  opacity: 0.6;
+}
+
+.group-content {
+  flex-grow: 1;
+  padding: 12px;
+
+
+  .simple-calendar {
+    display: flex;
+    flex-direction: column;
+
+    th {
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 black;
+      padding: 12px;
+      border-bottom: none;
+    }
+
+    th:first-child, th:last-child {
+      color: purple;
+    }
+
+    .day {
+      height: 160px;
+      background: white;
+      box-shadow: none;
+    }
+
+    .wday-0 {}
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {}
+
+    .today {}
+    .past {}
+    .future {}
+
+    .start-date {}
+
+    .prev-month {
+      background: #f8f6f6;
+    }
+
+    .next-month {
+      background: #f8f6f6;
+    }
+
+    .current-month {}
+
+    .has-events {
+      // background: none;
+    }
+  }
+}
+
+.group-content-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.calendar-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 24px;
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: black;
+    opacity: 0.6;
+  }
+}
+
+.calendar-title {
+  margin-left: 12px;
+  margin-right: 12px;
 }

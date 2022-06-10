@@ -1,4 +1,9 @@
 class UserGroupsController < ApplicationController
+  def new
+    @user_group = UserGroup.new
+    @group = Group.find(params[:group_id])
+  end
+
   def create
     @group = Group.find(params[:group_id])
     params[:user_group][:user_id].each do |id|
@@ -7,6 +12,8 @@ class UserGroupsController < ApplicationController
     redirect_to group_path(@group)
   end
 
+  def destroy
+  end
 
   private
 
