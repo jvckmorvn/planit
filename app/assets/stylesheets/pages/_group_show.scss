@@ -1,21 +1,20 @@
 
-// .members-icon:hover {
-//   color: #0E0000;
-//   cursor: pointer;
-// }
+.members-icon {
+  color: #0E0000;
+  text-decoration: none;
+}
 
 .members-icon:hover {
   color: #0E0000;
   cursor: pointer;
 }
-
 .group-container {
   display: flex;
   align-items: stretch;
   height: calc(100vh - 72px);
 }
 
-.group-channel-event {
+.group-channel {
   width: 340px;
   display: flex;
   flex-direction: column;
@@ -28,17 +27,6 @@
   margin-top: 12px;
   margin-bottom: 12px;
 }
-
-// .group-channel-event {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 12px;
-//   border-top: 1px solid $planit-white;
-//   background-color: white;
-//   margin-left: -12px;
-//   margin-right: -12px;
-// }
 
 .group-channel-row {
   display: flex;
@@ -72,3 +60,8 @@
   opacity: 0.6;
 }
 
+.group-content-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
