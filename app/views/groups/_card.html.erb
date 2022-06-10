@@ -6,5 +6,5 @@
       <p class="group-card-text"><i class="fa-solid fa-user-group"></i> <strong><%= group.users.count %></strong> <%= "member".pluralize(group.users.count) %></p>
     </div>
   <% end %>
-  <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), groups_path(@group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "group-card-delete-btn" %>
+  <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), group_path(group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "group-card-delete-btn" %>
 </div>

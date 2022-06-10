@@ -1,4 +1,8 @@
 <%= simple_form_for [@group, @user_group] do |f| %>
-  <%= f.input :user_id, collection: User.all, label_method: :username, input_html: {multiple: true, data: {controller: 'select2', select2_options_value: {tags: true}}} %>
+  <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
   <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
+  <%= f.button :submit, class: "submit-btn", value: "Delete Users" %>
 <% end %>
+
+
+<%# <%= link_to "Delete", group_user_group_path(@group, @user_group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
