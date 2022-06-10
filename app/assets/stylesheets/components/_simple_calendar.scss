@@ -137,3 +137,25 @@
   margin-left: 12px;
   margin-right: 12px;
 }
+
+.members-icon {
+  text-decoration: none;
+  color: #0E0000;
+}
+
+.members-icon:hover {
+  color: #0E0000;
+  cursor: pointer;
+}
+
+.me-1 {
+  min-width: 12px;
+  min-height: 12px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+
+// .avatar-small .event {
+
+// }
