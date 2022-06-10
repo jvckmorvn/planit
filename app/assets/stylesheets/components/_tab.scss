@@ -1,9 +1,32 @@
 .tab {
   cursor: pointer;
-  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 1px solid $planit-white;
+  background-color: $planit-purple-light;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.2s ease;
 }
 
-.active-tab {
+.tab:hover {
+  transform: scale(1.01);
+}
+
+.tab.active-tab {
   color: #EDE4F4;
-  background-color: #0E0000;
+  background-color: $planit-purple;
+}
+
+.tab:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: none;
+}
+
+.tab:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

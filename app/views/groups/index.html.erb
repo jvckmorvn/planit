@@ -1,11 +1,9 @@
-<h1>My Groups</h1>
-<div class="groups-container p-3">
+<h1 class="page-title">My Groups</h1>
+<div class="groups-container">
   <% @groups.each do |group| %>
     <%= render "card", group: group %>
   <% end %>
-  <div class="group-card-1 group-form-container">
+  <div class="group-card group-form-container">
     <%= render "form", group: @group %>
   </div>
 </div>
-
-<%#  %>
