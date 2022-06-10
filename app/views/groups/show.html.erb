@@ -1,39 +1,36 @@
-<div class="container" data-controller="switch-tabs" style="width: 100vw">
-  <div class="row">
-    <div class="col-2 border">
-      <div class="d-flex flex-column align-items-center">
-        <%= cl_image_tag @group.picture.key, class: "avatar-bordered m-2" %>
-        <h3><%= @group.name %></h3>
-      </div>
-      <div class="d-flex justify-content-around">
-        <p>
-          <%= link_to new_group_user_group_path(@group), class: "members-icon" do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
-        </p>
-        |
-        <p>
-          <i class="fa-solid fa-calendar-check"></i> <%= @events.count %> <%# click this icon to see "master calendar" (showing all events)? %>
-        </p>
-      </div>
+
+
+<div class="group-container" data-controller="switch-tabs">
+  <div class="group-channel">
+    <%= cl_image_tag @group.picture.key, class: "avatar-square" %>
+    <h3><%= @group.name %></h3>
+    <div class="group-channel-row">
+      <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
+      <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-calendar-check"></i> <%= @events.count %><% end %>
     </div>
-    <div class="col-5 d-flex justify-content-center align-items-center border tab active-tab" style="height: 40%;" data-switch-tabs-target="caltab" data-action="click->switch-tabs#showCalendar">
-      <p><strong>Calendar</strong></p>
-    </div>
-    <div class="col-5 d-flex justify-content-center align-items-center border tab" style="height: 40%;" data-switch-tabs-target="maptab" data-action="click->switch-tabs#showMap">
-      <p><strong>Map</strong></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-2 border">
+
+    <div class="group-channel-events-container">
       <% @events.each do |event| %>
         <%= render "events/card", event: event %>
       <% end %>
-      <div class="event-form">
-        <%= render "events/form", event: @event %>
-      </div>
     </div>
-    <div class="col-10 d-flex justify-content-center border">
-      <div data-switch-tabs-target="calendar"><%= render "events/calendar" %></div>
-      <div data-switch-tabs-target="map" class="d-none" style="height: 100%; width: 100%;"><%= render "events/map" %></div>
+
+    <div class="group-channel-create">
+      <%= render "events/form", event: @event %>
     </div>
   </div>
+
+  <div class="group-content">
+    <div class="group-content-header">
+        <div class="tab" data-switch-tabs-target="caltab" data-action="click->switch-tabs#showCalendar">
+          Calendar
+        </div>
+        <div class="tab" style="height: 40%;" data-switch-tabs-target="maptab" data-action="click->switch-tabs#showMap">
+          Map
+        </div>
+    </div>
+    <div data-switch-tabs-target="calendar"><%= render "events/calendar" %></div>
+    <div data-switch-tabs-target="map" class="d-none" style="height: 100%; width: 100%;"><%= render "events/map" %></div>
+  </div>
+
 </div>
