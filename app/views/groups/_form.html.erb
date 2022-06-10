@@ -1,5 +1,7 @@
-<%= simple_form_for @group do |f| %>
-  <%= f.input :name %>
-  <%= f.input :picture, as: :file %>
-  <%= f.button :submit, class: "submit-btn" %>
-<% end %>
+<div class="group-create">
+  <%= simple_form_for @group do |f| %>
+    <%= f.input :name %>
+    <%= f.input :picture, as: :file %>
+    <%= f.button :submit, class: "submit-btn" %>
+  <% end %>
+</div>

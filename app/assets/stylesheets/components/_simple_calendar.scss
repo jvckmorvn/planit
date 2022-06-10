@@ -18,17 +18,6 @@
   margin-bottom: 12px;
 }
 
-// .group-channel-event {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 12px;
-//   border-top: 1px solid $planit-white;
-//   background-color: white;
-//   margin-left: -12px;
-//   margin-right: -12px;
-// }
-
 .group-channel-row {
   display: flex;
   justify-content: flex-start;
@@ -83,7 +72,7 @@
     }
 
     .day {
-      height: 160px;
+      height: 140px;
       background: white;
       box-shadow: none;
     }
@@ -119,6 +108,7 @@
       // background: none;
     }
   }
+
 }
 
 .group-content-header {
