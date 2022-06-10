@@ -1,0 +1,4 @@
+<%= simple_form_for [@group, @user_group] do |f| %>
+  <%= f.input :user_id, collection: User.all, label_method: :username, input_html: {multiple: true, data: {controller: 'select2', select2_options_value: {tags: true}}} %>
+  <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
+<% end %>
