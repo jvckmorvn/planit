@@ -4,15 +4,14 @@ class UserGroupsController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  def create
+  def update
     @group = Group.find(params[:group_id])
-    params[:user_group][:user_id].each do |id|
-      UserGroup.create(user_id: id, group: @group)
+    @user_group = UserGroup.new(user_group_params)
+    if @user_group.save
+      redirect_to group_path(@group)
+    else
+      render :new, status: :unprocessable_entity
     end
-    redirect_to group_path(@group)
-  end
-
-  def destroy
   end
 
   private
