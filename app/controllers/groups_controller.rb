@@ -7,11 +7,12 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @user_group = UserGroup.new
-    @events = Event.all
+    @events = @group.events
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
+        colour: event.colour,
         info_window: render_to_string(partial: "events/info_window", locals: { event: event })
       }
     end

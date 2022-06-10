@@ -1,5 +1,6 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  opacity: 0.9;
+  border-radius: 4px;
 }
 
 .mapboxgl-popup-content {
@@ -7,8 +8,18 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.map-container {
+  width: 100%;
+  height: 80vh;
+}
+
 .mapbox {
   width: 100%;
   height: 100%;
   border-radius: 4px;
+}
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+  width: 126%;
 }

@@ -13,7 +13,18 @@
   border: 1px solid $planit-purple;
 }
 
+.avatar-small {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: 1px solid $planit-purple;
+  object-fit: cover;
+}
+
 .avatar-bordered {
+  background-size: cover;
+  background-position: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -24,8 +35,23 @@
 }
 
 .avatar-square {
-  width: 40px;
-  border-radius: 0px;
+  border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+  margin-bottom: 12px;
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0;
+  justify-content: center;
+}
+
+
+.group-name{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
