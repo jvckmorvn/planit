@@ -16,14 +16,14 @@
 }
 
 .landing-btn:hover {
-  color: #dfd8e6;
+  color: rgb(67, 61, 61);
 }
 
 .submit-btn {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  background-color: $planit-purple;
+  background-color: rgb(30, 24, 73);
   text-align: center;
   border-radius: 24px;
   padding: 4px 24px;
@@ -58,7 +58,7 @@
   top: 6px;
   width: 25px;
   background-color: rgba(10, 10, 10, 0.3);
-  border: 1px solid $planit-purple;
+  border: 1px solid rgb(30, 24, 73);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -72,25 +72,22 @@
 }
 
 @-webkit-keyframes glowing {
-  0% { background-color: rgb(76,22,82); -webkit-box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); -webkit-box-shadow: 0 0 10px rgb(102, 37, 110); }
-  100% { background-color: rgb(76,22,82); -webkit-box-shadow: 0 0 3px rgb(76,22,82); }
+  0% { background-color: rgb(20, 18, 43); -webkit-box-shadow: 0 0 3px rgb(20, 18, 43); }
+  50% { background-color: rgb(30, 24, 73); -webkit-box-shadow: 0 0 15px rgb(30, 24, 73); }
+  100% { background-color: rgb(20, 18, 43); -webkit-box-shadow: 0 0 3px rgb(20, 18, 43); }
 }
-
 @-moz-keyframes glowing {
-  0% { background-color: rgb(76,22,82); -moz-box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); -moz-box-shadow: 0 0 10px rgb(102, 37, 110); }
-  100% { background-color: rgb(76,22,82); -moz-box-shadow: 0 0 3px rgb(76,22,82); }
+  0% { background-color: rgb(20, 18, 43); -moz-box-shadow: 0 0 3px rgb(20, 18, 43); }
+  50% { background-color: rgb(30, 24, 73); -moz-box-shadow: 0 0 15px rgb(30, 24, 73); }
+  100% { background-color: rgb(20, 18, 43); -moz-box-shadow: 0 0 3px rgb(20, 18, 43); }
 }
-
 @-o-keyframes glowing {
-  0% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 10px rgb(102, 37, 110); }
-  100% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
+  0% { background-color: rgb(20, 18, 43); box-shadow: 0 0 3px rgb(20, 18, 43); }
+  50% { background-color: rgb(30, 24, 73); box-shadow: 0 0 15px rgb(30, 24, 73); }
+  100% { background-color: rgb(20, 18, 43); box-shadow: 0 0 3px rgb(20, 18, 43); }
 }
-
 @keyframes glowing {
-  0% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
-  50% { background-color: rgb(102, 37, 110); box-shadow: 0 0 10px rgb(102, 37, 110); }
-  100% { background-color: rgb(76,22,82); box-shadow: 0 0 3px rgb(76,22,82); }
+  0% { background-color: rgb(20, 18, 43); box-shadow: 0 0 3px rgb(20, 18, 43); }
+  50% { background-color: rgb(30, 24, 73); box-shadow: 0 0 15px rgb(30, 24, 73); }
+  100% { background-color: rgb(20, 18, 43); box-shadow: 0 0 3px rgb(20, 18, 43); }
 }
