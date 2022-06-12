@@ -1,7 +1,7 @@
 <%= simple_form_for [@group, @user_group] do |f| %>
   <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
   <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
-  <%= f.button :submit, class: "submit-btn", value: "Delete Users" %>
+  <%= f.button :submit, class: "delete-btn", value: "Delete Users" %>
 <% end %>
 
 
