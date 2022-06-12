@@ -26,11 +26,13 @@ export default class extends Controller {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
-      customMarker.style.backgroundColor = marker.colour
-      customMarker.style.width = "24px"
-      customMarker.style.height = "24px"
-      customMarker.style.border = "1px solid white"
-      customMarker.style.borderRadius = "50%"
+      customMarker.style.color = marker.colour
+      customMarker.style.fontSize = "24px"
+      // customMarker.style.width = "24px"
+      // customMarker.style.height = "24px"
+      // customMarker.style.border = "1px solid whitesmoke"
+      // customMarker.style.borderRadius = "50%"
+      customMarker.innerHTML = '<i class="fa-solid fa-location-pin"></i>'
       new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)

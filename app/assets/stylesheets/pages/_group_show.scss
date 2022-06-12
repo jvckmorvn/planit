@@ -1,60 +1,69 @@
-
-// .members-icon:hover {
-//   color: #0E0000;
-//   cursor: pointer;
-// }
-
-.members-icon:hover {
-  color: #0E0000;
-  cursor: pointer;
-}
-
 .group-container {
   display: flex;
   align-items: stretch;
   height: calc(100vh - 72px);
 }
 
-.group-channel-event {
+.group-channel {
   width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 12px;
-  border-right: 1px solid $planit-white;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  // border-right: 1px solid #ececec;
+  background-color: rgba(244, 244, 244, 0.3);
+  border-radius: 4px;
+  // overflow: hidden;
 }
 
 .group-channel-events-container {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin: 12px;
 }
 
-// .group-channel-event {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 12px;
-//   border-top: 1px solid $planit-white;
-//   background-color: white;
-//   margin-left: -12px;
-//   margin-right: -12px;
-// }
+.group-channel-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #ececec;
+  background-color: #ececec;
+  margin-right: -12px;
+}
+
+.group-channel-event + .group-channel-event {
+  border-top: 1px solid #ddd;
+}
+
+.group-channel-event:first-child {
+  border-top: 1px solid #ececec;
+  border-top-left-radius : 4px;
+  border-top-right-radius : 4px;
+}
+
+.group-channel-event:last-child {
+  border-bottom: 1px solid #ececec;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 
 .group-channel-row {
   display: flex;
   justify-content: flex-start;
   gap: 24px;
   align-items: center;
-}
-
-.group-channel-row:last-child {
-  border-bottom: 1px solid $planit-white;
+  color: white;
+  margin-bottom: 4px;
 }
 
 .group-channel-create {
-  border: 1px solid $planit-white;
+  // border: 1px solid #ececec;
   padding: 12px;
   border-radius: 4px;
+  margin-left: 12px;
+  background-color: rgba(244, 244, 244, 0.3);
 }
 
 .group-channel-create form {
@@ -72,3 +81,20 @@
   opacity: 0.6;
 }
 
+.members-icon {
+  text-decoration: none;
+  color: #ececec;
+}
+
+.members-icon:hover {
+  color: #0E0000;
+  cursor: pointer;
+}
+
+.me-1 {
+  min-width: 12px;
+  min-height: 12px;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  margin-left: 12px;
+}

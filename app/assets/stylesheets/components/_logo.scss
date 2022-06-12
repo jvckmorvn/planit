@@ -2,8 +2,13 @@
   position: relative;
 }
 
+.logo-img-container img {
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+
 .logo {
-  width: 50px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +25,7 @@
 }
 
 .logo-day:hover {
-  color: rgb(30, 24, 73);
+  color: $planit-navy;
 }
 
 #landing-logo-month {
