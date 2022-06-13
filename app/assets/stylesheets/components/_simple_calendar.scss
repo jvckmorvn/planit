@@ -20,7 +20,6 @@
     }
 
     .day {
-      height: 140px;
       background: $planit-white;
       box-shadow: none;
       position: relative;
@@ -42,7 +41,7 @@
       left: 24px;
       z-index: 10;
     }
-    ///////////////////////////////////////////
+
       /* bubble style */
     // .hoverBubble {
     //   background: #333333;
@@ -101,10 +100,20 @@
     //   font-size: 1.5em;
     //   text-align: center;
     // }
-///////////////////////////////////////////////////////
-    .wday-0 {
 
-    }
+    // @media (max-width: 680px) {
+    //   .day {
+    //     height: 70px
+    //   }
+    // }
+
+    // @media (min-width: 680px) {
+    //   .day {
+    //     height: 140px
+    //   }
+    // }
+
+    .wday-0 {}
     .wday-1 {}
     .wday-2 {}
     .wday-3 {}
