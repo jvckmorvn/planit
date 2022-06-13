@@ -17,6 +17,7 @@
   background-color: rgba(244, 244, 244, 0.3);
   border-radius: 4px;
   color: black;
+  border: 1px solid #ddd;
    // border-right: 1px solid $planit-white;
    // overflow: hidden;
 }
@@ -61,10 +62,11 @@
   border-right: 1px solid $planit-white;
   background-color: $planit-white;
   margin-right: -12px;
+  transition: 0.2s ease;
 }
 
 .group-channel-event:hover {
-  border: 1px solid $planit-white;
+  transform: scale(0.98);
   cursor: pointer;
 }
 
@@ -95,6 +97,7 @@
   border-radius: 4px;
   margin-left: 12px;
   background-color: rgba(244, 244, 244, 0.3);
+  border: 1px solid #ddd;
 }
 
 .group-channel-create form {
@@ -115,4 +118,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+}
+
+.event-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
