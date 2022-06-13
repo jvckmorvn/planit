@@ -12,10 +12,12 @@
   margin-left: 150px;
   margin-right: 150px;
   padding: 12px;
+  justify-content: center;
 }
 
 .groups-container > * {
   flex-grow: 0;
+
 }
 
 .group-card {
@@ -69,13 +71,9 @@
   padding: 12px;
 }
 
-// <<<<<<< style-card-index-page
-// .position-x {
-//   position: absolute;
-// =======
-// .group-create form {
-//   display: flex;
-//   flex-direction: column;
-//   // align-items: center;
-// >>>>>>> master
-// }
+
+.group-create form {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}

@@ -1,12 +1,10 @@
 <div class="group-container" data-controller="switch-tabs">
-  <div class="show-event ps-2 pt-2">
-    <div class="group-channel-information text-align-center">
-      <%= cl_image_tag @group.picture.key, class: "avatar-square" %>
-        <h3><%= @group.name %></h3>
-      <div class="group-channel-row">
-        <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
-        <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-calendar-check"></i> <%= @events.count %><% end %>
-      </div>
+  <div class="group-channel">
+    <%= cl_image_tag @group.picture.key, class: "avatar-square" %>
+      <h3><%= @group.name %></h3>
+    <div class="group-channel-row">
+      <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
+      <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-calendar-check"></i> <%= @events.count %><% end %>
     </div>
 
     <div class="group-channel-events-container">
