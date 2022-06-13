@@ -3,14 +3,17 @@
   <%= month_calendar do |date| %>
     <%= date.day %>
     <%= @events.name %>
-      <div class="day-popup">
-        Click to vote for this date.
-        <div class="arrow-down"></div>
-        <div class="arrow-down-bigger"></div>
-      </div>
+
     <% @calendar_events.each do |event| %>
       <% event.days.each do |event_day| %>
         <% if event_day.day_date == date %>
+          <% if event_day.day_date == date %>
+            <div class="day-popup">
+              Click to vote for this date.
+              <div class="arrow-down"></div>
+              <div class="arrow-down-bigger"></div>
+            </div>
+          <% end %>
           <% if event_day.day_votes.where(user_id: current_user.id).count > 0 %>
             <p><%= link_to event.name, day_day_vote_path(event_day, event_day.day_votes.where(user_id: current_user.id).first), data: {turbo_method: :delete} %>: <div class="event-marker" style="background-color: <%= event.colour %>; opacity: <%= event_day.day_votes.count > 0 ? (event_day.day_votes.count.to_f / event_day.event.group.users.count.to_f) : 0 %>"></div></p>
           <% else %>
