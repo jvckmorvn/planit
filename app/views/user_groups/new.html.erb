@@ -1,10 +1,25 @@
-<div class="d-flex justify-content-around align-items-center" style="background-color: rgba(255,255,255,0.4); border-radius: 12px;">
-  <div >
-    <%= simple_form_for [@group, @user_group] do |f| %>
+
+<div class="align-form">
+  <div class="member-container">
+    <%# <%= simple_form_for [@group, @user_group] do |f| %>
+    <%# <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
+    <%# <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
+    <div class="member-list">
+      <h3 class="member-list-title">Group Members</h3>
+      <% @group.user_groups.each do |user_group| %>
+        <%= user_group.user.username %>  <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), user_group_path(user_group), data: { turbo_method: :delete } %> <br>
+      <% end %>
+    </div>
+
+    <div class="member-data">
+      <%= simple_form_for [@group, @user_group], class: "member-data-title" do |f| %>
       <%= f.input :user_id, collection: User.all, label_method: :username, input_html: { multiple: true, data: { controller: 'select2', select2_options_value: {tags: true} } } %>
-      <%= f.submit class: "submit-btn", value: "Add Users" %>
-    <% end %>
+      <%= f.button :submit, "Add member", class: "submit-btn" %>
+      <%# <%= link_to "Delete Users", group_user_groups_path(@group, @user_group), class: "delete-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </div>
   </div>
+</div>
 
   <div >
     <% @group.user_groups.each do |user_group| %>
