@@ -11,17 +11,17 @@
       text-align: center;
       color: black;
       padding: 12px;
-      background-color: white;
+      background-color: $planit-white;
       border-bottom: none;
     }
 
     th:first-child, th:last-child {
-      color: purple;
+      color: $planit-navy;
     }
 
     .day {
       height: 140px;
-      background: white;
+      background: $planit-white;
       box-shadow: none;
     }
 
@@ -34,8 +34,7 @@
     .wday-6 {}
 
     .today {
-      outline: 3px solid $planit-purple;
-      // border: 1px solid black;
+      outline: 3px solid $planit-navy;
     }
     .past {}
     .future {}
@@ -66,7 +65,7 @@
   font-size: 24px;
 
   a {
-    color: black;
+    color: $planit-white;
   }
 
   a:hover {
@@ -78,4 +77,5 @@
 .calendar-title {
   margin-left: 12px;
   margin-right: 12px;
+  color: whitesmoke;
 }

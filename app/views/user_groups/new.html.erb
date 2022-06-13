@@ -2,15 +2,11 @@
   <div class="common-form">
     <%= simple_form_for [@group, @user_group] do |f| %>
       <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
-      <%# link_to "Add Users", group_user_group_path(@group, @user_group), class: "submit-btn", data: {turbo_method: :patch, turbo_confirm: "Are you sure?"} %>
       <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
-      <%= link_to "Delete Users", group_user_groups_path(@group, @user_group), class: "submit-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-      <%# f.button :submit, class: "submit-btn", value: "Delete Users" %>
+      <%= link_to "Delete Users", group_user_groups_path(@group, @user_group), class: "delete-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     <% end %>
   </div>
-  </div>
 </div>
-
 
 <%# <%= link_to "Delete Users", group_user_group_path(@group, @user_group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
  <%# group_user_group PATCH  /groups/:group_id/user_groups/:id(.:format) %>

@@ -16,9 +16,13 @@
     <% if !@hide_nav %>
       <%= render "shared/navbar" %>
     <% end %>
-    <%# <div class="m-3"> %>
-      <%= yield %>
-      <%= render "shared/flashes" %>
-    <%# </div> %>
+
+    <svg class="stars" id="stars"></svg>
+    <%= yield %>
+    <%= render "shared/flashes" %>
+
+    <% if !@hide_nav %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
