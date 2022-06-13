@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
       UserGroup.create(user: current_user, group: @group, is_creator: true)
       redirect_to group_path(@group)
     else
-      render :new, status: :unprocessable_entity
+      render :index, status: :unprocessable_entity
     end
   end
 
