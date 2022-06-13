@@ -62,10 +62,11 @@
   border-right: 1px solid $planit-white;
   background-color: $planit-white;
   margin-right: -12px;
+  transition: 0.2s ease;
 }
 
 .group-channel-event:hover {
-  border: 1px solid $planit-white;
+  transform: scale(0.98);
   cursor: pointer;
 }
 

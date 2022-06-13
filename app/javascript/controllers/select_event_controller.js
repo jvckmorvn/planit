@@ -11,7 +11,7 @@ export default class extends Controller {
     // this.eventCalendarTarget.style.borderRadius = "6px"
   }
 
-  // unSelectAll() {
-  //   this.eventCalendarTarget.style.backgroundColor = "none"
-  // }
+  unSelectAll() {
+//     this.eventCalendarTarget.style.backgroundColor = "transparent"
+  }
 }

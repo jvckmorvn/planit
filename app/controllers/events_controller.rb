@@ -20,7 +20,8 @@ class EventsController < ApplicationController
       @events = @group.events
       @calendar_events = @group.events
       @calendar_events = @events.where(id: params[:event_id]) if params[:event_id].present?
-      render "groups/show", status: :unprocessable_entity
+#       render "groups/show", status: :unprocessable_entity
+      render group_path(@group), status: :unprocessable_entity
     end
   end
 
