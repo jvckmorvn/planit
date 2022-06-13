@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   resources :user_groups, only: :destroy
   resources :events, only: :destroy
   get '/about', to: 'pages#about'
+  resources :events, only: [] do
+    resources :day_vote, only: %i[create destroy]
+  end
 end
