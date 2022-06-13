@@ -11,7 +11,7 @@
       text-align: center;
       color: black;
       padding: 12px;
-      background-color: #ececec;;
+      background-color: $planit-white;
       border-bottom: none;
     }
 
@@ -21,7 +21,7 @@
 
     .day {
       height: 140px;
-      background: #ececec;;
+      background: $planit-white;
       box-shadow: none;
     }
 
@@ -71,7 +71,7 @@
   font-size: 24px;
 
   a {
-    color: #ececec;
+    color: $planit-white;
   }
 
   a:hover {
