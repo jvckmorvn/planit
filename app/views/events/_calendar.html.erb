@@ -8,8 +8,8 @@
     <% events.each do |event| %>
       <% event.days.each do |event_day| %>
         <% if event_day.day_date == date %>
-          <%= link_to event.name, day_day_vote_index_path(event_day), data: {turbo_method: :post} %>
-          <%= "#{event_day.day_votes.count} votes" %>
+          <p><%= link_to event.name, day_day_vote_index_path(event_day), data: {turbo_method: :post} %>: <div class="event-marker" style="background-color: <%= event.colour %>; opacity: <%= event_day.day_votes.count > 0 ? (event_day.day_votes.count/event_day.event.group.users.count).round(1) : 0 %>"></div></p>
+          <%# "#{event_day.day_votes.count} votes" %>
         <% end %>
       <% end %>
     <% end %>
