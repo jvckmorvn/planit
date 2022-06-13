@@ -23,9 +23,30 @@
       height: 140px;
       background: $planit-white;
       box-shadow: none;
+      position: relative;
+    }
+///////////////////////////////////////////////////
+    .day:hover .day-popup {
+      display: block;
     }
 
-    .wday-0 {}
+    .day-popup {
+      background: white;
+      display: none;
+      border: 2px solid $planit-navy;
+      border-radius: 4px;
+      padding: 12px;
+      position: absolute;
+      top: 12px;
+      right: -24px;
+      left: 12px;
+      z-index: 10;
+    }
+
+///////////////////////////////////////////////////////
+    .wday-0 {
+
+    }
     .wday-1 {}
     .wday-2 {}
     .wday-3 {}
@@ -37,6 +58,7 @@
       outline: 3px solid $planit-navy;
     }
     .past {}
+
     .future {}
 
     .start-date {}
@@ -55,7 +77,6 @@
       // background: none;
     }
   }
-
 }
 
 .calendar-heading {
@@ -79,3 +100,8 @@
   margin-right: 12px;
   color: whitesmoke;
 }
+
+
+// -- on hover, if a user hasn’t voetd on an event, we want to change the border of the “day” div to show the user that they can vote for that day.
+// -- clicking on a day will change the styling to show they have voted for it, and make a create request via ajax to the day-vote model to create it. A user can then click again on it to delete it.
+// Hover effect (adding CSS and Stimulus controller for it) : Boram

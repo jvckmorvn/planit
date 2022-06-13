@@ -1,4 +1,10 @@
 <%= month_calendar do |date| %>
   <%= date.day %>
   <%= @events.name %>
+
+    <div class="day-popup">
+      Click to vote on this day.
+      <%# <button>Vote</button> %>
+    </div>
+
 <% end %>
