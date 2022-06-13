@@ -3,7 +3,9 @@ class DayVoteController < ApplicationController
 
   def create
     # if @user_group.clickon class day
-      @vote = Vote.new(vote_params)
+      @day = Day.find(params[:day_id])
+      @vote = DayVote.create(day: @day, user: current_user)
+      redirect_to group_path(@day.event.group)
     # end
   end
 
