@@ -1,15 +1,12 @@
 
 <% style = params[:event_id].present? ? "background-color: #{events&.first&.colour};" : "" %>
-<div data-select-event-target="eventCalendar" style="<%= style %>">
+<div style="<%= style %>">
   <%= month_calendar do |date| %>
     <%= date.day %>
-    <%= @events.name %>
-
-      <div class="day-popup bubblePosition hoverBubble">
-        Click to vote on this day.
-      </div>
-
-    <% @events.each do |event| %>
+      <%# <div class="day-popup bubblePosition hoverBubble"> %>
+        <%# Click to vote on this day. %>
+      <%# </div> %>
+    <% @calendar_events.each do |event| %>
       <% event.days.each do |event_day| %>
         <% if event_day.day_date == date %>
           <% if event_day.day_votes.where(user_id: current_user.id).count > 0 %>
