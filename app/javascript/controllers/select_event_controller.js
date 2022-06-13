@@ -5,13 +5,13 @@ export default class extends Controller {
   static targets = [ "eventCalendar" ]
 
   selectEvent(e) {
-    e.preventDefault
-    let eventColour = e.currentTarget.dataset.eventColour
-    this.eventCalendarTarget.style.backgroundColor = eventColour
-    this.eventCalendarTarget.style.borderRadius = "6px"
+    // e.preventDefault
+    // let eventColour = e.currentTarget.dataset.eventColour
+    // this.eventCalendarTarget.style.backgroundColor = eventColour
+    // this.eventCalendarTarget.style.borderRadius = "6px"
   }
 
-  unSelectAll() {
-    this.eventCalendarTarget.style.backgroundColor = "none"
-  }
+  // unSelectAll() {
+  //   this.eventCalendarTarget.style.backgroundColor = "none"
+  // }
 }

@@ -17,6 +17,9 @@ class EventsController < ApplicationController
       end
       redirect_to group_path(@group)
     else
+      @events = @group.events
+      @calendar_events = @group.events
+      @calendar_events = @events.where(id: params[:event_id]) if params[:event_id].present?
       render "groups/show", status: :unprocessable_entity
     end
   end
@@ -24,7 +27,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to group_path(@event), status: :see_other
+    redirect_to group_path(@event.group), status: :see_other
   end
 
   private
