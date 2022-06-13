@@ -1,3 +1,14 @@
+
+.members-icon {
+  color: #0E0000;
+  text-decoration: none;
+}
+
+.members-icon:hover {
+  color: #0E0000;
+  cursor: pointer;
+}
+
 .group-container {
   display: flex;
   align-items: stretch;
@@ -102,4 +113,10 @@
   border: 1px solid $planit-white;
   border-radius: 50%;
   margin-left: 12px;
+}
+
+.group-content-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
 }

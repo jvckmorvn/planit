@@ -2,7 +2,8 @@
   <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
   <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
   <%= f.button :submit, class: "delete-btn", value: "Delete Users" %>
+  <%= link_to "Delete Users", group_user_groups_path(@group, @user_group), class: "delete-btn submit-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
 
-
-<%# <%= link_to "Delete", group_user_group_path(@group, @user_group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%# <%= link_to "Delete Users", group_user_group_path(@group, @user_group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+ <%# group_user_group PATCH  /groups/:group_id/user_groups/:id(.:format) %>
