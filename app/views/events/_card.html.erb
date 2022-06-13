@@ -1,5 +1,5 @@
 <%= link_to group_path(group, event_id: event.id) do %>
-  <div class="group-channel-event"  style="background-color: <%= event.colour %>;"data-action="click->select-event#selectEvent" data-event-colour=<%= event.colour %>>
+  <div class="group-channel-event" style="background-color: <%= event.colour %>;">
     <div class="d-flex align-items-center group-channel-event-row-avatar">
       <div class="avatar-in-event"><%= cl_image_tag event.user.avatar.key, class: "avatar-small" %></div>
     </div>
