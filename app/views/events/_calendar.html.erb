@@ -5,8 +5,10 @@
     <%= date.day %>
     <%= @events.name %>
 
-      <div class="day-popup bubblePosition hoverBubble">
+      <div class="day-popup">
         Click to vote for this date.
+        <div class="arrow-down"></div>
+        <div class="arrow-down-bigger"></div>
       </div>
 
     <% @events.each do |event| %>
