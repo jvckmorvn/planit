@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
     @events = @group.events
     @calendar_events = @group.events
     @calendar_events = @events.where(id: params[:event_id]) if params[:event_id].present?
-    @markers = @events.geocoded.map do |event|
+    @markers = @calendar_events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
