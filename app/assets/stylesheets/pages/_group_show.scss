@@ -72,6 +72,11 @@
   margin-right: -12px;
 }
 
+.group-channel-event:hover {
+  border: 1px solid $planit-white;
+  cursor: pointer;
+}
+
 .group-channel-event + .group-channel-event {
   border-top: 1px solid #ddd;
 }
@@ -119,9 +124,4 @@
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-}
-
-.event-border {
-  border: 2px solid red;
-  border-radius: 8px
 }
