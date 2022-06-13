@@ -1,18 +1,22 @@
-<%= month_calendar do |date| %>
-  <%= date.day %>
-  <%= @events.name %>
 
-    <div class="day-popup bubblePosition hoverBubble">
-      Click to vote on this day.
-      <%# <button>Vote</button> %>
-    </div>
+<div data-select-event-target="eventCalendar">
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+    <%= @events.name %>
 
-  <% @events.each do |event| %>
-    <% event.days.each do |event_day| %>
-      <% if event_day.day_date == date %>
-        <%= link_to event.name, day_day_vote_index_path(event_day), data: {turbo_method: :post} %>
-        <%= "#{event_day.day_votes.count} votes" %>
+      <div class="day-popup bubblePosition hoverBubble">
+        Click to vote on this day.
+        <%# <button>Vote</button> %>
+      </div>
+
+    <% @events.each do |event| %>
+      <% event.days.each do |event_day| %>
+        <% if event_day.day_date == date %>
+          <%= link_to event.name, day_day_vote_index_path(event_day), data: {turbo_method: :post} %>
+          <%= "#{event_day.day_votes.count} votes" %>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
-<% end %>
+</div>
+
