@@ -9,4 +9,14 @@
     </div>
     <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
   </div>
+
+  <div class="d-flex align-items-center">
+    <div class="ms-2"><%= event.name %></div>
+    <% if event.user == current_user  %>
+      <div data-controller="lock" class="ms-2"><%= event.locked ? "🔒" : link_to("🔓", group_event_path(event.group, event), data: {turbo_method: :patch}) %></div>
+    <% else %>
+      <div class="ms-2"><%= event.locked ? "🔒" : "🔓" %></div>
+    <% end %>
+  </div>
+  <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
 <% end %>
