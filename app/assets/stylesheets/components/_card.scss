@@ -1,6 +1,7 @@
 .group-card {
   display: flex;
   flex-direction: column;
+  // background-color: rgba(244, 244, 244, 0.3);
   background-color: rgba(244, 244, 244, 0.3);
   width: 300px;
   border-radius: 4px;
@@ -38,11 +39,11 @@
 }
 
 .group-card-title {
-  color: black;
+  color: $planit-white;
 }
 
 .group-card-text {
-  color: black;
+  color: $planit-white;
 }
 
 .group-form-container {
