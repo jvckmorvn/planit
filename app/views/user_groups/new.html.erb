@@ -1,20 +1,14 @@
+<div class="d-flex justify-content-around align-items-center" style="background-color: rgba(255,255,255,0.4); border-radius: 12px;">
+  <div >
+    <%= simple_form_for [@group, @user_group] do |f| %>
+      <%= f.input :user_id, collection: User.all, label_method: :username, input_html: { multiple: true, data: { controller: 'select2', select2_options_value: {tags: true} } } %>
+      <%= f.submit class: "submit-btn", value: "Add Users" %>
+    <% end %>
+  </div>
 
-<% @group.user_groups.each do |user_group| %>
-  <p style="color: white;"><%= user_group.user.username %></p> <%= link_to 'Delete', user_group_path(user_group), data: { turbo_method: :delete } %>
-<% end %>
-
-<div class="align-form" style="background-color: rgba(255,255,255,0.4); border-radius: 12px;">
-  <div class="common-form">
-    <%# <%= simple_form_for [@group, @user_group] do |f| %>
-      <%# <%= f.input :user_id, as: :check_boxes, collection: User.all, label_method: :username, input_html: {multiple: true} %>
-      <%# <%= f.button :submit, class: "submit-btn", value: "Add Users" %>
-      <%= simple_form_for [@group, @user_group] do |f| %>
-        <%= f.input :user_id, collection: User.all, label_method: :username, input_html: { multiple: true, data: { controller: 'select2', select2_options_value: {tags: true} } } %>
-        <%= f.submit %>
-      <%= link_to "Delete Users", group_user_groups_path(@group, @user_group), class: "delete-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <div >
+    <% @group.user_groups.each do |user_group| %>
+      <p style="color: white;"><%= user_group.user.username %></p> <%= link_to 'Remove User', user_group_path(user_group), data: { turbo_method: :delete } %>
     <% end %>
   </div>
 </div>
-
-<%# <%= link_to "Delete Users", group_user_group_path(@group, @user_group), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
- <%# group_user_group PATCH  /groups/:group_id/user_groups/:id(.:format) %>
