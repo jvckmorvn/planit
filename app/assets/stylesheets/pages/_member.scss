@@ -1,0 +1,42 @@
+.member-container {
+  background-color: #ffffff99;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 4px;
+
+  .fa-xmark {
+    color: $planit-red;
+  }
+  .fa-xmark:hover {
+    color: red;
+  }
+}
+.member-list-title {
+  color: black;
+  text-align: left;
+  font-size: 32px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.member-list {
+  font-size: 24px;
+  text-align: left;
+  min-width: 400px;
+}
+
+.member-data {
+  color: black;
+  text-align: center;
+  font-size: 48px !important;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  min-width: 400px;
+}
+
+.member-data-title {
+  font-size: 48px !important;
+}
