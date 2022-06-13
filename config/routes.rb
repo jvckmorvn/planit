@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :events, only: %i[create destroy]
   end
   get '/about', to: 'pages#about'
+  resources :events, only: [] do
+    resources :day_vote, only: %i[create destroy]
+  end
 end
