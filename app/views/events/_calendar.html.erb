@@ -1,18 +1,19 @@
-
-<div data-select-event-target="eventCalendar">
+<% style = params[:event_id].present? ? "background-color: #{events&.first&.colour};" : "" %>
+<div data-select-event-target="eventCalendar" style="<%= style %>">
   <%= month_calendar do |date| %>
     <%= date.day %>
-    <%= @event.name %>
 
       <div class="day-popup bubblePosition hoverBubble">
         Click to vote on this day.
         <%# <button>Vote</button> %>
       </div>
 
-    <% @events.each do |event| %>
+    <% events.each do |event| %>
+
       <% event.days.each do |event_day| %>
         <% if event_day.day_date == date %>
           <%= link_to event.name, day_day_vote_index_path(event_day), data: {turbo_method: :post} %>
+          <div class="event_opacity"></div>
           <%= "#{event_day.day_votes.count} votes" %>
         <% end %>
       <% end %>
