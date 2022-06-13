@@ -1,6 +1,6 @@
-
 <div class="group-channel-event">
   <div class="d-flex align-items-center">
+<<<<<<< Updated upstream
     <div class="me-1" style="width: 12px; height: 12px; border: 1px solid white; border-radius: 50%; background-color: <%= event.colour %>;"></div>
     <div class="ms-2"><%= event.name %></div>
     <div class="ms-2"><%= event.locked ? "🔒" : "" %></div>
@@ -9,4 +9,10 @@
     <div><%= cl_image_tag event.user.avatar.key, class: "avatar-small" %></div>
   </div>
   <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
+=======
+    <div class="me-1" style="background-color: <%= event.colour %>;"></div>
+    <div><%= event.name %></div>
+    <div class="ms-1"><%= event.locked ? "🔒" : "" %></div>
+    <div class="avatar-in-event"><%= cl_image_tag event.user.avatar.key, class: "avatar-small" %></div></div>
+>>>>>>> Stashed changes
 </div>
