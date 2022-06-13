@@ -51,12 +51,14 @@
 
 .group-channel-event {
   display: grid;
-  grid-template-columns: 1fr min-content min-content;
+  grid-template-columns: min-content 1fr min-content;
   grid-gap: 12px;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
   border-top: 1px solid $planit-white;
+  border-left: 1px solid $planit-white;
+  border-right: 1px solid $planit-white;
   background-color: $planit-white;
   margin-right: -12px;
 }
