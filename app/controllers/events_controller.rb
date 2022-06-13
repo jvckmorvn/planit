@@ -17,6 +17,9 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to group_path(@event), status: :see_other
   end
 
   private
