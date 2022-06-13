@@ -17,7 +17,7 @@ class EventsController < ApplicationController
       end
       redirect_to group_path(@group)
     else
-      render "groups/show", status: :unprocessable_entity
+      render group_path(@group), status: :unprocessable_entity
     end
   end
 
