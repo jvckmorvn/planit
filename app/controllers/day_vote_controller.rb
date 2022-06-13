@@ -2,17 +2,18 @@ class DayVoteController < ApplicationController
   require 'json'
 
   def create
-    # if @user_group.clickon class day
-      @day = Day.find(params[:day_id])
-      @vote = DayVote.create(day: @day, user: current_user)
+    @day = Day.find(params[:day_id])
+      unless @day.event.day_votes.where(user: current_user).count > 0
+        @vote = DayVote.create(day: @day, user: current_user)
+      else
+        flash[:alert] = "Sorry you can only vote for one day"
+      end
       redirect_to group_path(@day.event.group)
-    # end
   end
 
   def destroy
-    # if @user_group.clickon class day is already chosen
-      @vote = Vote.find(params[:id])
+    @vote = DayVote.find(params[:id])
       @vote.destroy
-    # end
+      redirect_to group_path(@vote.day.event.group), status: :see_other
   end
 end
