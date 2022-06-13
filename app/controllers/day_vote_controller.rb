@@ -2,11 +2,10 @@ class DayVoteController < ApplicationController
   require 'json'
 
   def create
-    # if @user_group.clickon class day
-      @day = Day.find(params[:day_id])
-      @vote = DayVote.create(day: @day, user: current_user)
-      redirect_to group_path(@day.event.group)
-    # end
+    # if @user_group.clickon class day, increment day.day_votes by 1
+    @day = Day.find(params[:day_id])
+    @vote = DayVote.create(day: @day, user: current_user)
+    redirect_to group_path(@day.event.group)
   end
 
   def destroy

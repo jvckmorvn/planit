@@ -16,8 +16,7 @@ class Day < ApplicationRecord
       opacity = ratio.round(1)
     end
     # use result to set opacity value in inline style attribute of circular marker div within each day
-    colour = self.event.colour
-    return { colour: colour, opacity: opacity }
+    return opacity
   end
 end
 
