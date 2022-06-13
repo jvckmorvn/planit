@@ -1,14 +1,13 @@
-<div class="group-container" data-controller="switch-tabs">
+<div class="group-container" data-controller="switch-tabs select-event">
   <div class="show-event">
     <div class="group-channel">
       <%= cl_image_tag @group.picture.key, class: "avatar-square" %>
       <h3><i class="fa-regular fa-flag group-channel-flag"></i> <%= @group.name %></h3>
       <div class="group-channel-row">
         <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-user-group"></i> <%= @group.users.count %><% end %>
-        <%= link_to new_group_user_group_path(@group), class: "group-channel-link" do %><i class="fa-solid fa-calendar-check"></i> <%= @events.count %><% end %>
+        <a href="#", class="group-channel-link"><i class="fa-solid fa-calendar-check" data-action="click->select-event#unSelectAll"></i> <%= @events.count %></a>
       </div>
     </div>
-
     <div class="group-channel-events-container">
       <% @events.each do |event| %>
         <%= render "events/card", event: event %>
@@ -22,10 +21,10 @@
 
   <div class="group-content">
     <div class="group-content-header">
-      <div class="tab active-tab" data-switch-tabs-target="caltab" data-action="click->switch-tabs#showCalendar">
+      <div class="tab active-tab" data-switch-tabs-target="calTab" data-action="click->switch-tabs#showCalendar">
         Calendar
       </div>
-      <div class="tab" style="height: 40%;" data-switch-tabs-target="maptab" data-action="click->switch-tabs#showMap">
+      <div class="tab" style="height: 40%;" data-switch-tabs-target="mapTab" data-action="click->switch-tabs#showMap">
         Map
       </div>
     </div>

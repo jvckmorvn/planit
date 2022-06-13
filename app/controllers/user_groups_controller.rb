@@ -15,7 +15,6 @@ class UserGroupsController < ApplicationController
   def destroy
     @group = Group.find(params[:group_id])
     @user_group = UserGroup.find(params[:user_group_id])
-    raise
     redirect_to group_path(@group), status: :see_other
   end
 

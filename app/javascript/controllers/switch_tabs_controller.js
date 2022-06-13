@@ -2,24 +2,24 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="switch-tabs"
 export default class extends Controller {
-  static targets = [ "calendar", "map", "caltab", "maptab", "mapReload" ]
+  static targets = [ "calendar", "map", "calTab", "mapTab", "mapReload" ]
 
   get mapController() {
     return this.application.getControllerForElementAndIdentifier(this.mapReloadTarget, "map")
   }
 
   showCalendar() {
-    this.caltabTarget.classList.add("active-tab");
+    this.calTabTarget.classList.add("active-tab");
     this.mapTarget.classList.add("d-none");
     this.calendarTarget.classList.remove("d-none");
-    this.maptabTarget.classList.remove("active-tab");
+    this.mapTabTarget.classList.remove("active-tab");
   }
 
   showMap() {
-    this.maptabTarget.classList.add("active-tab");
+    this.mapTabTarget.classList.add("active-tab");
     this.calendarTarget.classList.add("d-none");
     this.mapTarget.classList.remove("d-none");
-    this.caltabTarget.classList.remove("active-tab");
+    this.calTabTarget.classList.remove("active-tab");
     this.mapController.map.resize();
   }
 }
