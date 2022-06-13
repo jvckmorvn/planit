@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :user_groups, only: %i[new create destroy]
     resources :events, only: %i[create destroy]
   end
+  get '/about', to: 'pages#about'
 end
