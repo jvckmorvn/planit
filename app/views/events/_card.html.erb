@@ -10,9 +10,23 @@
 
     <div class="lock-in-event">
       <% if event.user == current_user  %>
-        <div data-controller="lock" class="ms-2"><%= event.locked ? "🔒" : link_to("🔓", group_event_path(event.group, event), data: {turbo_method: :patch}) %></div>
+        <div data-controller="lock" class="ms-2">
+          <% if event.locked %>
+            <i class="fa-solid fa-lock"></i>
+          <% else %>
+            <%= link_to group_event_path(event.group, event), data: {turbo_method: :patch} do %>
+              <i class="fa-solid fa-lock-open"></i>
+            <% end %>
+          <% end %>
+        </div>
       <% else %>
-        <div class="ms-2"><%= event.locked ? "🔒" : "🔓" %></div>
+        <div class="ms-2">
+          <% if event.locked %>
+            <i class="fa-solid fa-lock"></i>
+          <% else %>
+           <i class="fa-solid fa-lock-open"></i>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
@@ -21,3 +35,5 @@
     <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
   </div>
 </div>
+<%#
+link_to("🔓", group_event_path(event.group, event), data: {turbo_method: :patch}) %>
