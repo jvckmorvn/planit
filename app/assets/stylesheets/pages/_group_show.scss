@@ -136,8 +136,59 @@
   margin-left: 12px;
 }
 
-.event-marker {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+.simple-calendar {
+
+  .event-marker {
+    width: 100%;
+    height: fit-content;
+    padding-left: 12px;
+    border-radius: 4px;
+  }
+
+  a.event-marker {
+    color: black;
+  }
+  a:hover.event-marker {
+    color: black;
+  }
+
+  .event-marker:hover .day-popup {
+    display: block;
+  }
+
+  .day-popup {
+    background: white;
+    display: none;
+    border: 1px solid $planit-navy;
+    border-radius: 4px;
+    padding: 12px;
+    position: absolute;
+    top: -98%;
+    right: 2px;
+    left: 36px;
+    z-index: 10;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(255, 255, 255);
+    z-index: 1;
+    left: 50%;
+  }
+
+  .arrow-down-bigger {
+    position: absolute;
+    bottom: -11px;
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid black;
+    left: calc(50% - 1px);
+  }
 }
