@@ -12,7 +12,6 @@ class Event < ApplicationRecord
   validates :proposed_start_date, presence: true
   validates :proposed_end_date, presence: true
   validates :address, presence: true
-  
   COLOURS = ["crimson", "olivedrab", "royalblue", "orange", "orchid"]
 
   def rgba_colour(opacity)
