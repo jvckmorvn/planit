@@ -5,7 +5,7 @@
 
   <div class="justify-name-and-lock-in-event">
     <%= link_to group_path(group, event_id: event.id) do %>
-      <div class="name-in-event"><%= event.name %></div>
+      <div class="name-in-event"><%= event.name.length < 30 ? event.name : "#{event.name.split("").first(27).join}..." %></div>
     <% end %>
 
     <div class="lock-in-event">
