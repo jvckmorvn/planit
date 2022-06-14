@@ -2,11 +2,12 @@
   flex-grow: 1;
   padding: 12px;
 
-
-
   .simple-calendar {
     display: flex;
     flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: rgba(244, 244, 244, 0.3);
 
     th {
       text-align: center;
@@ -74,8 +75,8 @@
 .calendar-heading {
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
   font-size: 24px;
+  padding: 10px;
 
   a {
     color: $planit-white;
