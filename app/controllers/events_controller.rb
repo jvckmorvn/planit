@@ -29,7 +29,6 @@ class EventsController < ApplicationController
         winning_day = day.day_date
       end
     end
-    # p winning_day
     if winning_day != nil
       @event.update(locked_start: winning_day, locked_end: winning_day, locked: true)
       flash[:notice] = "Congratulations, the event is on #{@event.locked_start.to_s.split('-').reverse.join('/')}."

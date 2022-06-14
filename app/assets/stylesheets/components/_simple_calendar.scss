@@ -26,46 +26,6 @@
       position: relative;
     }
 
-    .day:hover .day-popup {
-      display: block;
-    }
-
-    .day-popup {
-      background: white;
-      display: none;
-      border: 1px solid $planit-navy;
-      border-radius: 4px;
-      padding: 12px;
-      position: absolute;
-      top: -50px;
-      right: 8px;
-      left: 28px;
-      z-index: 10;
-    }
-
-    .arrow-down {
-      position: absolute;
-      bottom: -10px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid rgb(255, 255, 255);
-      z-index: 1;
-      left: 50%;
-    }
-
-    .arrow-down-bigger {
-      position: absolute;
-      bottom: -11px;
-      width: 0;
-      height: 0;
-      border-left: 11px solid transparent;
-      border-right: 11px solid transparent;
-      border-top: 11px solid black;
-      left: calc(50% - 1px);
-    }
-
     .wday-0 {}
     .wday-1 {}
     .wday-2 {}

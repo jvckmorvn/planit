@@ -13,4 +13,19 @@ class Event < ApplicationRecord
   validates :proposed_end_date, presence: true
   validates :address, presence: true
   COLOURS = ["orangered", "olivedrab", "royalblue", "orange", "orchid"]
+
+  def rgba_colour(opacity)
+    case self.colour
+    when "orangered"
+      return "rgba(255, 69, 0, #{opacity});"
+    when "olivedrab"
+      return "rgba(107, 142, 35, #{opacity});"
+    when "royalblue"
+      return "rgba(65, 105, 225, #{opacity});"
+    when "orange"
+      return "rgba(255, 165, 0, #{opacity});"
+    when "orchid"
+      return "rgba(202, 99, 198, #{opacity});"
+    end
+  end
 end
