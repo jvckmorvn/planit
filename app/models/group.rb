@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
   has_one_attached :picture
+  validates :colour, presence: true
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :picture, presence: true
