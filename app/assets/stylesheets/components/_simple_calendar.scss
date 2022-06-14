@@ -74,8 +74,13 @@
     .wday-6 {}
 
     .today {
+
+      // outline: 3px solid $planit-navy;
+      border: 3px solid $planit-navy;
+
       outline: 3px solid $planit-navy;
       z-index: 1;
+
     }
     .past {}
 
