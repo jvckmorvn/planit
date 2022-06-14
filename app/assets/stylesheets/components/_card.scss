@@ -23,7 +23,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,14 +48,11 @@
 
 .group-form-container {
   padding: 12px;
-  background-color: #ffffff91;
 }
 
 .group-create form {
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
-  margin-bottom: 12px;
 }
 
 .name-in-event{
