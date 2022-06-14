@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div data-switch-tabs-target="calendar"><%= render "events/calendar", events: @calendar_events %></div>
+    <div data-controller="show-voters" data-switch-tabs-target="calendar"><%= render "events/calendar", events: @calendar_events %></div>
     <div class="d-none map-container" data-switch-tabs-target="map"><%= render "events/map" %></div>
   </div>
 </div>
