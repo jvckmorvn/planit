@@ -91,6 +91,16 @@
   left: 0px;
 }
 
+.justify-name-and-lock-in-event {
+  display: flex;
+  align-items: center;
+}
+
+.delete-in-event {
+  position: relative;
+  right: 0px;
+}
+
 .group-channel-create {
   // border: 1px solid $planit-white;
   padding: 12px;
@@ -113,12 +123,6 @@
   border: 1px solid $planit-white;
   border-radius: 50%;
   margin-left: 12px;
-}
-
-.group-content-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
 }
 
 .event-marker {
