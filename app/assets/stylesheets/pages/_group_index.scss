@@ -8,15 +8,21 @@
 .groups-container {
   display: grid;
   grid-gap: 24px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   margin-left: 150px;
   margin-right: 150px;
   padding: 12px;
   justify-content: center;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .groups-container > * {
   flex-grow: 0;
-
 }

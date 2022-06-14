@@ -19,6 +19,15 @@
   align-items: center;
   margin-bottom: 40px;
   margin-top: 40px;
+
+  @media (max-width: 700px) {
+    text-align: center;
+    font-size: 80px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 160px;
+  }
 }
 
 @keyframes move-twink-back {
