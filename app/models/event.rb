@@ -12,5 +12,5 @@ class Event < ApplicationRecord
   validates :proposed_start_date, presence: true
   validates :proposed_end_date, presence: true
   validates :address, presence: true
-  COLOURS = ["maroon", "darkgreen", "midnightblue", "darkorange", "purple"]
+  COLOURS = ["crimson", "olivedrab", "royalblue", "orange", "orchid"]
 end
