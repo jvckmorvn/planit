@@ -16,5 +16,8 @@ application.register("map", MapController)
 import Select2Controller from "./select2_controller.js"
 application.register("select2", Select2Controller)
 
+import ShowVotersController from "./show_voters_controller.js"
+application.register("show-voters", ShowVotersController)
+
 import SwitchTabsController from "./switch_tabs_controller.js"
 application.register("switch-tabs", SwitchTabsController)
