@@ -19,7 +19,7 @@ module Planit
     config.i18n.available_locales = [:en, :de, :fr]
     config.i18n.default_locale = :en
     config.time_zone = 'Central Time (US & Canada)'
-    config.beginning_of_week = :sunday
+    config.beginning_of_week = :monday
 
     # Configuration for the application, engines, and railties goes here.
     #
