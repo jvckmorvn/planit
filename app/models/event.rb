@@ -19,7 +19,7 @@ class Event < ApplicationRecord
     when "crimson"
       return "rgba(220, 20, 60, #{opacity});"
     when "olivedrab"
-      return "rgba(107, 142, 35, #{opacity});"
+      return "rgba(0, 100, 0, #{opacity});"
     when "royalblue"
       return "rgba(65, 105, 225, #{opacity});"
     when "orange"
