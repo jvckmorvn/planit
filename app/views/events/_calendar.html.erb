@@ -1,4 +1,4 @@
-<% style = params[:event_id].present? ? "background-color: #{events&.first&.colour};" : "" %>
+<% style = params[:event_id].present? ? "background-color: #{events&.first&.colour}; border-radius: 8px;" : "" %>
 <div style="<%= style %>">
   <%= month_calendar do |date| %>
     <%= date.day %>
