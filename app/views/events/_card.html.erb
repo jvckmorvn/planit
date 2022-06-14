@@ -1,18 +1,23 @@
 <div class="group-channel-event" style="background-color: <%= event.colour %>;">
-  <%= link_to group_path(group, event_id: event.id) do %>
-    <div class="d-flex align-items-center">
-      <div class="avatar-in-event">
-        <%= cl_image_tag event.user.avatar.key, class: "avatar-small" %>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-    <div class="ms-2"><%= event.name %></div>
+  <div class="avatar-in-event">
+    <%= cl_image_tag event.user.avatar.key, class: "avatar-small" %>
+  </div>
+
+  <div class="justify-name-and-lock-in-event">
+    <%= link_to group_path(group, event_id: event.id) do %>
+      <div class="name-in-event"><%= event.name %></div>
+    <% end %>
+
+    <div class="lock-in-event">
       <% if event.user == current_user  %>
         <div data-controller="lock" class="ms-2"><%= event.locked ? "🔒" : link_to("🔓", group_event_path(event.group, event), data: {turbo_method: :patch}) %></div>
       <% else %>
         <div class="ms-2"><%= event.locked ? "🔒" : "🔓" %></div>
       <% end %>
     </div>
+  </div>
+
+  <div class="delete-in-event">
     <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "event-card-delete-btn" %>
   </div>
-<% end %>
+</div>
