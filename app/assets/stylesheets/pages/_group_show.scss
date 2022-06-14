@@ -118,6 +118,14 @@
 .delete-in-event {
   position: relative;
   right: 0px;
+  color: $planit-red;
+
+  i {
+    color: $planit-red;
+  }
+  i:hover {
+    color: red;
+  }
 }
 
 .group-channel-create {
