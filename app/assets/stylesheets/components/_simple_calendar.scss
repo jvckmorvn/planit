@@ -24,7 +24,7 @@
       box-shadow: none;
       position: relative;
     }
-///////////////////////////////////////////////////
+
     .day:hover .day-popup {
       display: block;
     }
@@ -32,7 +32,7 @@
     .day-popup {
       background: white;
       display: none;
-      border: 2px solid $planit-navy;
+      border: 1px solid $planit-navy;
       border-radius: 4px;
       padding: 12px;
       position: absolute;
@@ -42,76 +42,28 @@
       z-index: 10;
     }
 
-      /* bubble style */
-    // .hoverBubble {
-    //   background: #333333;
-    //   color: #ffffff;
-    //   cursor: pointer;
-    //   opacity: 0;
-    //   padding: 5px;
-    //   position: absolute;
-    //   text-align: left;
-    //   visibility: hidden;
-    //   -webkit-border-radius: 3px;
-    //   -moz-border-radius: 3px;
-    //   -o-border-radius: 3px;
-    //   border-radius: 3px;
-    //   -webkit-transition: all 0.25s;
-    //   -moz-transition: all 0.25s;
-    //   -ms-transition: all 0.25s;
-    //   -o-transition: all 0.25s;
-    //   transition: all 0.25s;
-    // }
+    .arrow-down {
+      position: absolute;
+      bottom: -10px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid rgb(255, 255, 255);
+      z-index: 1;
+      left: 50%;
+    }
 
-    // .bubblePosition {
-    //   bottom: 115%;
-    //   height: inherit;
-    //   left: 0;
-    //   min-height: 200px;
-    //   top: auto;
-    //   width: 190px;
-    // }
-
-    // .hoverBubble:after,
-    // .bubblePosition:after {
-    //   border: 8px solid transparent;
-    //   border-top-color: #333333;
-    //   bottom: -15px;
-    //   content: '';
-    //   height: 0px;
-    //   left: 0;
-    //   margin: 0 auto;
-    //   position: absolute;
-    //   right: 0;
-    //   width: 0px;
-    // }
-
-    // /* bubble hover */
-    // ul.navUL li a:hover .hoverBubble {
-    //   opacity: 1;
-    //   visibility: visible;
-    //   -webkit-transition: all 0.25s;
-    //   -moz-transition: all 0.25s;
-    //   -ms-transition: all 0.25s;
-    //   -o-transition: all 0.25s;
-    //   transition: all 0.25s;
-
-    //   display: block;
-    //   font-size: 1.5em;
-    //   text-align: center;
-    // }
-
-    // @media (max-width: 680px) {
-    //   .day {
-    //     height: 70px
-    //   }
-    // }
-
-    // @media (min-width: 680px) {
-    //   .day {
-    //     height: 140px
-    //   }
-    // }
+    .arrow-down-bigger {
+      position: absolute;
+      bottom: -11px;
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-top: 11px solid black;
+      left: calc(50% - 1px);
+    }
 
     .wday-0 {}
     .wday-1 {}
@@ -122,8 +74,13 @@
     .wday-6 {}
 
     .today {
+
       // outline: 3px solid $planit-navy;
       border: 3px solid $planit-navy;
+
+      outline: 3px solid $planit-navy;
+      z-index: 1;
+
     }
     .past {}
 
@@ -174,9 +131,3 @@
   margin-right: 12px;
   color: whitesmoke;
 }
-
-
-
-// -- on hover, if a user hasn’t voetd on an event, we want to change the border of the “day” div to show the user that they can vote for that day.
-// -- clicking on a day will change the styling to show they have voted for it, and make a create request via ajax to the day-vote model to create it. A user can then click again on it to delete it.
-// Hover effect (adding CSS and Stimulus controller for it) : Boram
