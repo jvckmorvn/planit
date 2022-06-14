@@ -32,7 +32,7 @@ class EventsController < ApplicationController
     # p winning_day
     if winning_day != nil
       @event.update(locked_start: winning_day, locked_end: winning_day, locked: true)
-      flash[:notice] = "Congratulations, the event is on #{@event.locked_start}."
+      flash[:notice] = "Congratulations, the event is on #{@event.locked_start.to_s.split('-').reverse.join('/')}."
       redirect_to group_path(@event.group)
     else
       flash[:notice] = "There isn't a winning date yet."
