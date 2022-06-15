@@ -3,7 +3,6 @@
   display: grid;
   align-items: stretch;
   height: calc(100vh - 72px);
-  // margin-left: 10px;
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
@@ -19,14 +18,12 @@
 }
 
 .group-channel {
-  width: 370px;
+  min-width: 392px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 12px;
-  // margin-top: 12px;
   margin-bottom: 12px;
-  // margin-left: 12px;
   background-color: rgba(244, 244, 244, 0.3);
   border-radius: 4px;
   color: white;
@@ -68,7 +65,7 @@
 }
 
 .group-channel-events-container {
-  margin: 12px;
+  // margin: 12px;
 }
 
 .group-channel-event {
@@ -83,9 +80,8 @@
   // border-left: 1px solid $planit-white;
   // border-right: 1px solid $planit-white;
   background-color: $planit-white;
-  margin-right: -12px;
   transition: 0.2s ease;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   border-radius: 4px;
 }
 

@@ -6,9 +6,14 @@ class UserGroupsController < ApplicationController
 
   def create
     @group = Group.find(params[:group_id])
+    # @emails = []
     params[:user_group][:user_id].each do |id|
       UserGroup.create(user_id: id, group: @group)
+      # user = User.find(id)
+      # user && emails.push(user.email)
     end
+
+    # ApplicationMailer.with(order: @order).new_order_email.deliver_later
     redirect_to group_path(@group)
   end
 
