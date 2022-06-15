@@ -1,7 +1,7 @@
 
 <div class="member-container">
   <div class="member-card">
-      <h3 class="member-list-title">Group Members</h3>
+      <h3 class="member-list-title">All Users</h3>
 
     <div class="member-data">
       <%= simple_form_for [@group, @user_group], class: "member-data-title" do |f| %>
@@ -21,7 +21,9 @@
           <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), user_group_path(user_group), data: { turbo_method: :delete } %> <br>
         <% end %>
       </div>
-      <%= link_to "Back to group", group_path(@group), class: "submit-btn" %>
+      <div style="text-align: center;">
+        <%= link_to "Back to group", group_path(@group), class: "btn submit-btn" %>
+      </div>
     </div>
   </div>
 </div>
