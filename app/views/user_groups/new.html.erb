@@ -1,33 +1,13 @@
 
 <div class="member-container">
   <div class="member-card">
-      <h3 class="member-list-title">Group Members</h3>
+      <h3 class="member-list-title">All Users</h3>
 
     <div class="member-data">
       <%= simple_form_for [@group, @user_group], class: "member-data-title" do |f| %>
         <%= f.input :user_id, collection: User.all, label_method: :username, input_html: { multiple: true, data: { controller: 'select2', select2_options_value: {tags: true} } }, class: "member-data-position", label: false %>
         <%= f.button :submit, value: "Add members", class: "submit-btn" %>
       <% end %>
-
-      <%# Work in progress %>
-      <button id="share" onclick="share" class="submit-btn">Share</button>
-      <script>
-        function share() {
-          navigator.share({
-            text: 'Your friend Saki organised an event, please come and vote for the date you would like to join.',
-            url: 'http://www.planit.lol/'
-          })
-        }
-
-        const shareButton = document.getElementById("share")
-
-        if (navigator.share) {
-          shareButton.addEventListener("click", share)
-        } else {
-          shareButton.remove()
-        }
-      </script>
-      <%# Work in progress %>
 
     </div>
   </div>
@@ -41,7 +21,9 @@
           <%= link_to raw("<i class='fa-solid fa-xmark'></i>"), user_group_path(user_group), data: { turbo_method: :delete } %> <br>
         <% end %>
       </div>
-      <%= link_to "Back to group", group_path(@group), class: "submit-btn" %>
+      <div style="text-align: center;">
+        <%= link_to "Back to group", group_path(@group), class: "btn submit-btn" %>
+      </div>
     </div>
   </div>
 </div>
