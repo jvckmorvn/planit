@@ -1,4 +1,4 @@
-<% content_for :meta_title, "#{DEFAULT_META["meta_product_name"]} · #{@group.name}" %>
+<% content_for :meta_title, "#{@group.name} · #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_image, cl_image_path(@group.picture.key) %>
 
 <div class="group-container" data-controller="switch-tabs">
