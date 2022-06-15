@@ -1,5 +1,5 @@
 .footer-container {
-  position: fixed;
+  flex-shrink: 0;
   height: 50px;
   width: 100%;
   left: 0;
@@ -18,12 +18,22 @@
   }
 
   i {
-    font-size: 16px;
+    font-size: 12px;
     color: #ffffff99;
     opacity: 0.9;
   }
 
   i:hover {
+    color: #acacac99;
+  }
+
+  a {
+    font-size: 12px;
+    color: #ffffff99;
+    opacity: 0.9;
+  }
+
+  a:hover {
     color: #acacac99;
   }
 

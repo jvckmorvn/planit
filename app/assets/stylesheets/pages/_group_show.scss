@@ -2,7 +2,7 @@
 .group-container {
   display: grid;
   align-items: stretch;
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
