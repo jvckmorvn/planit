@@ -31,13 +31,15 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body style="margin-bottom: 50px;">
+  <body>
     <% if !@hide_nav %>
       <%= render "shared/navbar" %>
     <% end %>
 
     <svg class="stars" id="stars"></svg>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
     <%= render "shared/flashes" %>
 
     <% if !@hide_nav %>
