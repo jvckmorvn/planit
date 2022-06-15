@@ -1,9 +1,17 @@
 .about-title{
   color: $planit-white;
-  margin: 24px;
+  margin: 48px;
+  text-align: center;
+  h1 {
+    margin-bottom: 48px;
+  }
 }
 
 .about-content{
   color: $planit-white;
-  margin: 24px;
+  margin: 48px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  line-height: 200%;
 }
