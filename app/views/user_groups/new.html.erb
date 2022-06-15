@@ -6,6 +6,25 @@
         <%= f.input :user_id, collection: User.all, label_method: :username, input_html: { multiple: true, data: { controller: 'select2', select2_options_value: {tags: true} } } %>
         <%= f.button :submit, value: "Add members", class: "submit-btn" %>
       <% end %>
+      <%# Work in progress %>
+      <button id="share" onclick="share">Share</button>
+      <script>
+        function share() {
+          navigator.share({
+            text: 'Your friend Saki organised an event, please come and vote for the date you would like to join.',
+            url: 'https://jvckmorvn-planit.herokuapp.com/'
+          })
+        }
+
+        const shareButton = document.getElementById("share")
+
+        if (navigator.share) {
+          shareButton.addEventListener("click", share)
+        } else {
+          shareButton.remove()
+        }
+      </script>
+      <%# Work in progress %>
     </div>
   </div>
 
