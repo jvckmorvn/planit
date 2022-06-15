@@ -25,6 +25,12 @@
   min-width: 400px;
 }
 
+.member-data-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .member-data-title {
   font-size: 48px !important;
 }
