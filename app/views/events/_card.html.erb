@@ -12,19 +12,40 @@
       <% if event.user == current_user  %>
         <div data-controller="lock" class="ms-2">
           <% if event.locked %>
-            <i class="fa-solid fa-lock"></i>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                <i class="fa-solid fa-lock"></i>
+              </li>
+            </ul>
           <% else %>
             <%= link_to group_event_path(event.group, event), data: {turbo_method: :patch} do %>
-              <i class="fa-solid fa-lock-open"></i>
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                  <i class="fa-solid fa-lock-open"></i>
+                </li>
             <% end %>
+                <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                  <%= event.day_votes.count %></li>
+              </ul>
           <% end %>
         </div>
       <% else %>
         <div class="ms-2">
           <% if event.locked %>
-            <i class="fa-solid fa-lock"></i>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                <i class="fa-solid fa-lock"></i>
+              </li>
+            </ul>
           <% else %>
-           <i class="fa-solid fa-lock-open"></i>
+           <ul class="list-group list-group-horizontal">
+              <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                <i class="fa-solid fa-lock-open"></i>
+              </li>
+              <li class="list-group-item" style="color: whitesmoke; border: none; background-color: transparent;">
+                <%= event.day_votes.count %>
+              </li>
+            </ul>
           <% end %>
         </div>
       <% end %>
