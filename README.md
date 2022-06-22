@@ -11,4 +11,4 @@ Welcome to our group events planner! Here's how it works: create an account on t
 - Run `rails db:create db:migrate` in your terminal to set up the database.
 - Finally, run `rails server` and navigate to 'localhost:3000' in your web browser to start using the app!
 
-**NB:** If you have no interest in the source code of the app, feel free to visit it in its production environment instead at [planit.lol](http://www.planit.lol).
+**NB:** If you have no interest in the source code of the app, feel free to visit it in its production environment instead at [Planit](http://www.planit.lol).
