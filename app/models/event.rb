@@ -15,7 +15,7 @@ class Event < ApplicationRecord
   COLOURS = ["crimson", "olivedrab", "royalblue", "orange", "orchid"]
 
   def rgba_colour(opacity)
-    case self.colour
+    case colour
     when "crimson"
       return "rgba(220, 20, 60, #{opacity});"
     when "olivedrab"
