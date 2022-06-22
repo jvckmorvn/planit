@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
-  after_action :redirect, only: {registrations: [:update]}
+  after_action :redirect, only: { registrations: [:update] }
 
   def configure_permitted_parameters
     # For sign-up
